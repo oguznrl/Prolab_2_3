@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prolab2_3Spo", "Prolab2_3Spo.csproj", "{ECFE22C6-60CB-4605-ABE4-51EA19E6E902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECFE22C6-60CB-4605-ABE4-51EA19E6E902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFE22C6-60CB-4605-ABE4-51EA19E6E902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFE22C6-60CB-4605-ABE4-51EA19E6E902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFE22C6-60CB-4605-ABE4-51EA19E6E902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7AA181C-84F4-443F-8D9F-AA87259F7C6D}
+	EndGlobalSection
+EndGlobal

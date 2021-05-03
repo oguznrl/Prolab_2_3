@@ -1,0 +1,14 @@
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\Prolab2_3Spo.exe.config
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\Prolab2_3Spo.exe
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\Prolab2_3Spo.pdb
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.csprojAssemblyReference.cache
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.Form1.resources
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.Properties.Resources.resources
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.csproj.GenerateResource.cache
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.csproj.CoreCompileInputs.cache
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.exe
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.pdb
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\DotLiquid.dll
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\DotLiquid.xml
+C:\Users\oguzn\source\repos\Prolab2_3Spo\bin\Debug\it\DotLiquid.resources.dll
+C:\Users\oguzn\source\repos\Prolab2_3Spo\obj\Debug\Prolab2_3Spo.csproj.CopyComplete
