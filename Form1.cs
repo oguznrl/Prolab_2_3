@@ -216,6 +216,7 @@ namespace Prolab2_3Spo
         {
             String userEmail = textNewUsMail.Text;
             String userName = textNewUser.Text;
+            String userCountry = textNewCountry.Text;
             String userPassword;
             if (textNewPass.Text.Equals(textNewPassConf.Text))
             {

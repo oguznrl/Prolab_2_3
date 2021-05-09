@@ -100,6 +100,7 @@
             this.buttonAlbumProsc = new System.Windows.Forms.Button();
             this.buttonSingerProsc = new System.Windows.Forms.Button();
             this.premiumUserPanel = new System.Windows.Forms.Panel();
+            this.buttonBeNormal = new System.Windows.Forms.Button();
             this.buttonPreTop = new System.Windows.Forms.Button();
             this.buttonPremiumExit = new System.Windows.Forms.Button();
             this.buttonPremiumSearch = new System.Windows.Forms.Button();
@@ -138,6 +139,7 @@
             this.buttonClassicBack = new System.Windows.Forms.Button();
             this.listClassic = new System.Windows.Forms.ListView();
             this.normalUserPanel = new System.Windows.Forms.Panel();
+            this.buttonBePre = new System.Windows.Forms.Button();
             this.buttonProcsFollowing = new System.Windows.Forms.Button();
             this.buttonNormalTop = new System.Windows.Forms.Button();
             this.buttonNormalSearchPre = new System.Windows.Forms.Button();
@@ -169,8 +171,8 @@
             this.buttonPreSongListPop = new System.Windows.Forms.Button();
             this.buttonPreSongListJazz = new System.Windows.Forms.Button();
             this.buttonPreSongListBack = new System.Windows.Forms.Button();
-            this.buttonBePre = new System.Windows.Forms.Button();
-            this.buttonBeNormal = new System.Windows.Forms.Button();
+            this.textNewCountry = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.registerPanel.SuspendLayout();
             this.logPanel.SuspendLayout();
             this.userloginPanel.SuspendLayout();
@@ -193,6 +195,8 @@
             // 
             // registerPanel
             // 
+            this.registerPanel.Controls.Add(this.textNewCountry);
+            this.registerPanel.Controls.Add(this.label23);
             this.registerPanel.Controls.Add(this.buttonRegBack);
             this.registerPanel.Controls.Add(this.textNewUsMail);
             this.registerPanel.Controls.Add(this.label8);
@@ -236,7 +240,7 @@
             // 
             // textNewPassConf
             // 
-            this.textNewPassConf.Location = new System.Drawing.Point(117, 87);
+            this.textNewPassConf.Location = new System.Drawing.Point(117, 115);
             this.textNewPassConf.Name = "textNewPassConf";
             this.textNewPassConf.Size = new System.Drawing.Size(100, 22);
             this.textNewPassConf.TabIndex = 11;
@@ -245,7 +249,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 90);
+            this.label5.Location = new System.Drawing.Point(6, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 10;
@@ -253,7 +257,7 @@
             // 
             // textNewPass
             // 
-            this.textNewPass.Location = new System.Drawing.Point(117, 59);
+            this.textNewPass.Location = new System.Drawing.Point(117, 87);
             this.textNewPass.Name = "textNewPass";
             this.textNewPass.Size = new System.Drawing.Size(100, 22);
             this.textNewPass.TabIndex = 9;
@@ -262,7 +266,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 62);
+            this.label4.Location = new System.Drawing.Point(6, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 8;
@@ -885,6 +889,16 @@
             this.premiumUserPanel.Size = new System.Drawing.Size(167, 300);
             this.premiumUserPanel.TabIndex = 9;
             // 
+            // buttonBeNormal
+            // 
+            this.buttonBeNormal.Location = new System.Drawing.Point(3, 148);
+            this.buttonBeNormal.Name = "buttonBeNormal";
+            this.buttonBeNormal.Size = new System.Drawing.Size(161, 23);
+            this.buttonBeNormal.TabIndex = 6;
+            this.buttonBeNormal.Text = "Premiumdan Ayrıl";
+            this.buttonBeNormal.UseVisualStyleBackColor = true;
+            this.buttonBeNormal.Click += new System.EventHandler(this.buttonBeNormal_Click);
+            // 
             // buttonPreTop
             // 
             this.buttonPreTop.Location = new System.Drawing.Point(3, 90);
@@ -1281,6 +1295,16 @@
             this.normalUserPanel.Size = new System.Drawing.Size(167, 300);
             this.normalUserPanel.TabIndex = 10;
             // 
+            // buttonBePre
+            // 
+            this.buttonBePre.Location = new System.Drawing.Point(3, 207);
+            this.buttonBePre.Name = "buttonBePre";
+            this.buttonBePre.Size = new System.Drawing.Size(161, 46);
+            this.buttonBePre.TabIndex = 13;
+            this.buttonBePre.Text = "Premium Olmak İçin Ödeme Yap";
+            this.buttonBePre.UseVisualStyleBackColor = true;
+            this.buttonBePre.Click += new System.EventHandler(this.buttonBePre_Click);
+            // 
             // buttonProcsFollowing
             // 
             this.buttonProcsFollowing.Location = new System.Drawing.Point(3, 178);
@@ -1313,7 +1337,7 @@
             // 
             // buttonNormalExit
             // 
-            this.buttonNormalExit.Location = new System.Drawing.Point(3, 236);
+            this.buttonNormalExit.Location = new System.Drawing.Point(3, 259);
             this.buttonNormalExit.Name = "buttonNormalExit";
             this.buttonNormalExit.Size = new System.Drawing.Size(161, 23);
             this.buttonNormalExit.TabIndex = 9;
@@ -1515,7 +1539,7 @@
             this.preSongListPanel.Controls.Add(this.buttonPreSongListPop);
             this.preSongListPanel.Controls.Add(this.buttonPreSongListJazz);
             this.preSongListPanel.Controls.Add(this.buttonPreSongListBack);
-            this.preSongListPanel.Location = new System.Drawing.Point(633, 385);
+            this.preSongListPanel.Location = new System.Drawing.Point(636, 385);
             this.preSongListPanel.Name = "preSongListPanel";
             this.preSongListPanel.Size = new System.Drawing.Size(394, 279);
             this.preSongListPanel.TabIndex = 13;
@@ -1589,25 +1613,22 @@
             this.buttonPreSongListBack.UseVisualStyleBackColor = true;
             this.buttonPreSongListBack.Click += new System.EventHandler(this.buttonPreSongListBack_Click);
             // 
-            // buttonBePre
+            // textNewCountry
             // 
-            this.buttonBePre.Location = new System.Drawing.Point(3, 207);
-            this.buttonBePre.Name = "buttonBePre";
-            this.buttonBePre.Size = new System.Drawing.Size(161, 23);
-            this.buttonBePre.TabIndex = 13;
-            this.buttonBePre.Text = "Premium Ol";
-            this.buttonBePre.UseVisualStyleBackColor = true;
-            this.buttonBePre.Click += new System.EventHandler(this.buttonBePre_Click);
+            this.textNewCountry.Location = new System.Drawing.Point(117, 59);
+            this.textNewCountry.Name = "textNewCountry";
+            this.textNewCountry.Size = new System.Drawing.Size(100, 22);
+            this.textNewCountry.TabIndex = 16;
+            this.textNewCountry.UseSystemPasswordChar = true;
             // 
-            // buttonBeNormal
+            // label23
             // 
-            this.buttonBeNormal.Location = new System.Drawing.Point(3, 148);
-            this.buttonBeNormal.Name = "buttonBeNormal";
-            this.buttonBeNormal.Size = new System.Drawing.Size(161, 23);
-            this.buttonBeNormal.TabIndex = 6;
-            this.buttonBeNormal.Text = "Premiumdan Ayrıl";
-            this.buttonBeNormal.UseVisualStyleBackColor = true;
-            this.buttonBeNormal.Click += new System.EventHandler(this.buttonBeNormal_Click);
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 17);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Ülke:";
             // 
             // Form1
             // 
@@ -1620,11 +1641,11 @@
             this.Controls.Add(this.popPanel);
             this.Controls.Add(this.normalUserPanel);
             this.Controls.Add(this.userloginPanel);
-            this.Controls.Add(this.classicPanel);
-            this.Controls.Add(this.premiumUserPanel);
             this.Controls.Add(this.logPanel);
-            this.Controls.Add(this.preSearchPanel);
+            this.Controls.Add(this.classicPanel);
             this.Controls.Add(this.adminPanel);
+            this.Controls.Add(this.premiumUserPanel);
+            this.Controls.Add(this.preSearchPanel);
             this.Controls.Add(this.adminProscPanel);
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.registerPanel);
@@ -1811,6 +1832,8 @@
         private System.Windows.Forms.Button buttonPreSongAddAll;
         private System.Windows.Forms.Button buttonBePre;
         private System.Windows.Forms.Button buttonBeNormal;
+        private System.Windows.Forms.TextBox textNewCountry;
+        private System.Windows.Forms.Label label23;
     }
 }
 
