@@ -162,13 +162,15 @@
             this.label22 = new System.Windows.Forms.Label();
             this.listFollowing = new System.Windows.Forms.ListView();
             this.preSongListPanel = new System.Windows.Forms.Panel();
+            this.buttonPreSongAddChoosed = new System.Windows.Forms.Button();
+            this.buttonPreSongAddAll = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.buttonPreSongListClassic = new System.Windows.Forms.Button();
             this.buttonPreSongListPop = new System.Windows.Forms.Button();
             this.buttonPreSongListJazz = new System.Windows.Forms.Button();
             this.buttonPreSongListBack = new System.Windows.Forms.Button();
-            this.buttonPreSongAddAll = new System.Windows.Forms.Button();
-            this.buttonPreSongAddChoosed = new System.Windows.Forms.Button();
+            this.buttonBePre = new System.Windows.Forms.Button();
+            this.buttonBeNormal = new System.Windows.Forms.Button();
             this.registerPanel.SuspendLayout();
             this.logPanel.SuspendLayout();
             this.userloginPanel.SuspendLayout();
@@ -871,6 +873,7 @@
             // 
             // premiumUserPanel
             // 
+            this.premiumUserPanel.Controls.Add(this.buttonBeNormal);
             this.premiumUserPanel.Controls.Add(this.buttonPreTop);
             this.premiumUserPanel.Controls.Add(this.buttonPremiumExit);
             this.premiumUserPanel.Controls.Add(this.buttonPremiumSearch);
@@ -886,7 +889,7 @@
             // 
             this.buttonPreTop.Location = new System.Drawing.Point(3, 90);
             this.buttonPreTop.Name = "buttonPreTop";
-            this.buttonPreTop.Size = new System.Drawing.Size(75, 23);
+            this.buttonPreTop.Size = new System.Drawing.Size(161, 23);
             this.buttonPreTop.TabIndex = 5;
             this.buttonPreTop.Text = "Top 10";
             this.buttonPreTop.UseVisualStyleBackColor = true;
@@ -894,9 +897,9 @@
             // 
             // buttonPremiumExit
             // 
-            this.buttonPremiumExit.Location = new System.Drawing.Point(3, 148);
+            this.buttonPremiumExit.Location = new System.Drawing.Point(3, 177);
             this.buttonPremiumExit.Name = "buttonPremiumExit";
-            this.buttonPremiumExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonPremiumExit.Size = new System.Drawing.Size(161, 23);
             this.buttonPremiumExit.TabIndex = 4;
             this.buttonPremiumExit.Text = "Çıkış Yap";
             this.buttonPremiumExit.UseVisualStyleBackColor = true;
@@ -906,7 +909,7 @@
             // 
             this.buttonPremiumSearch.Location = new System.Drawing.Point(3, 119);
             this.buttonPremiumSearch.Name = "buttonPremiumSearch";
-            this.buttonPremiumSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonPremiumSearch.Size = new System.Drawing.Size(161, 23);
             this.buttonPremiumSearch.TabIndex = 3;
             this.buttonPremiumSearch.Text = "Şarkı Ara";
             this.buttonPremiumSearch.UseVisualStyleBackColor = true;
@@ -916,7 +919,7 @@
             // 
             this.buttonPremiumClassic.Location = new System.Drawing.Point(3, 61);
             this.buttonPremiumClassic.Name = "buttonPremiumClassic";
-            this.buttonPremiumClassic.Size = new System.Drawing.Size(75, 23);
+            this.buttonPremiumClassic.Size = new System.Drawing.Size(161, 23);
             this.buttonPremiumClassic.TabIndex = 2;
             this.buttonPremiumClassic.Text = "Klasik";
             this.buttonPremiumClassic.UseVisualStyleBackColor = true;
@@ -926,7 +929,7 @@
             // 
             this.buttonPremiumPop.Location = new System.Drawing.Point(3, 32);
             this.buttonPremiumPop.Name = "buttonPremiumPop";
-            this.buttonPremiumPop.Size = new System.Drawing.Size(75, 23);
+            this.buttonPremiumPop.Size = new System.Drawing.Size(161, 23);
             this.buttonPremiumPop.TabIndex = 1;
             this.buttonPremiumPop.Text = "Pop";
             this.buttonPremiumPop.UseVisualStyleBackColor = true;
@@ -936,7 +939,7 @@
             // 
             this.buttonPremiumJazz.Location = new System.Drawing.Point(3, 3);
             this.buttonPremiumJazz.Name = "buttonPremiumJazz";
-            this.buttonPremiumJazz.Size = new System.Drawing.Size(75, 23);
+            this.buttonPremiumJazz.Size = new System.Drawing.Size(161, 23);
             this.buttonPremiumJazz.TabIndex = 0;
             this.buttonPremiumJazz.Text = "Jazz";
             this.buttonPremiumJazz.UseVisualStyleBackColor = true;
@@ -1264,6 +1267,7 @@
             // 
             // normalUserPanel
             // 
+            this.normalUserPanel.Controls.Add(this.buttonBePre);
             this.normalUserPanel.Controls.Add(this.buttonProcsFollowing);
             this.normalUserPanel.Controls.Add(this.buttonNormalTop);
             this.normalUserPanel.Controls.Add(this.buttonNormalSearchPre);
@@ -1309,7 +1313,7 @@
             // 
             // buttonNormalExit
             // 
-            this.buttonNormalExit.Location = new System.Drawing.Point(3, 207);
+            this.buttonNormalExit.Location = new System.Drawing.Point(3, 236);
             this.buttonNormalExit.Name = "buttonNormalExit";
             this.buttonNormalExit.Size = new System.Drawing.Size(161, 23);
             this.buttonNormalExit.TabIndex = 9;
@@ -1516,6 +1520,26 @@
             this.preSongListPanel.Size = new System.Drawing.Size(394, 279);
             this.preSongListPanel.TabIndex = 13;
             // 
+            // buttonPreSongAddChoosed
+            // 
+            this.buttonPreSongAddChoosed.Location = new System.Drawing.Point(283, 147);
+            this.buttonPreSongAddChoosed.Name = "buttonPreSongAddChoosed";
+            this.buttonPreSongAddChoosed.Size = new System.Drawing.Size(108, 23);
+            this.buttonPreSongAddChoosed.TabIndex = 16;
+            this.buttonPreSongAddChoosed.Text = "Seçileni Ekle";
+            this.buttonPreSongAddChoosed.UseVisualStyleBackColor = true;
+            this.buttonPreSongAddChoosed.Click += new System.EventHandler(this.buttonPreSongAddChoosed_Click);
+            // 
+            // buttonPreSongAddAll
+            // 
+            this.buttonPreSongAddAll.Location = new System.Drawing.Point(169, 147);
+            this.buttonPreSongAddAll.Name = "buttonPreSongAddAll";
+            this.buttonPreSongAddAll.Size = new System.Drawing.Size(108, 23);
+            this.buttonPreSongAddAll.TabIndex = 15;
+            this.buttonPreSongAddAll.Text = "Tümünü Ekle";
+            this.buttonPreSongAddAll.UseVisualStyleBackColor = true;
+            this.buttonPreSongAddAll.Click += new System.EventHandler(this.buttonPreSongAddAll_Click);
+            // 
             // listView1
             // 
             this.listView1.HideSelection = false;
@@ -1565,25 +1589,25 @@
             this.buttonPreSongListBack.UseVisualStyleBackColor = true;
             this.buttonPreSongListBack.Click += new System.EventHandler(this.buttonPreSongListBack_Click);
             // 
-            // buttonPreSongAddAll
+            // buttonBePre
             // 
-            this.buttonPreSongAddAll.Location = new System.Drawing.Point(169, 147);
-            this.buttonPreSongAddAll.Name = "buttonPreSongAddAll";
-            this.buttonPreSongAddAll.Size = new System.Drawing.Size(108, 23);
-            this.buttonPreSongAddAll.TabIndex = 15;
-            this.buttonPreSongAddAll.Text = "Tümünü Ekle";
-            this.buttonPreSongAddAll.UseVisualStyleBackColor = true;
-            this.buttonPreSongAddAll.Click += new System.EventHandler(this.buttonPreSongAddAll_Click);
+            this.buttonBePre.Location = new System.Drawing.Point(3, 207);
+            this.buttonBePre.Name = "buttonBePre";
+            this.buttonBePre.Size = new System.Drawing.Size(161, 23);
+            this.buttonBePre.TabIndex = 13;
+            this.buttonBePre.Text = "Premium Ol";
+            this.buttonBePre.UseVisualStyleBackColor = true;
+            this.buttonBePre.Click += new System.EventHandler(this.buttonBePre_Click);
             // 
-            // buttonPreSongAddChoosed
+            // buttonBeNormal
             // 
-            this.buttonPreSongAddChoosed.Location = new System.Drawing.Point(283, 147);
-            this.buttonPreSongAddChoosed.Name = "buttonPreSongAddChoosed";
-            this.buttonPreSongAddChoosed.Size = new System.Drawing.Size(108, 23);
-            this.buttonPreSongAddChoosed.TabIndex = 16;
-            this.buttonPreSongAddChoosed.Text = "Seçileni Ekle";
-            this.buttonPreSongAddChoosed.UseVisualStyleBackColor = true;
-            this.buttonPreSongAddChoosed.Click += new System.EventHandler(this.buttonPreSongAddChoosed_Click);
+            this.buttonBeNormal.Location = new System.Drawing.Point(3, 148);
+            this.buttonBeNormal.Name = "buttonBeNormal";
+            this.buttonBeNormal.Size = new System.Drawing.Size(161, 23);
+            this.buttonBeNormal.TabIndex = 6;
+            this.buttonBeNormal.Text = "Premiumdan Ayrıl";
+            this.buttonBeNormal.UseVisualStyleBackColor = true;
+            this.buttonBeNormal.Click += new System.EventHandler(this.buttonBeNormal_Click);
             // 
             // Form1
             // 
@@ -1785,6 +1809,8 @@
         private System.Windows.Forms.Button buttonPreSongListBack;
         private System.Windows.Forms.Button buttonPreSongAddChoosed;
         private System.Windows.Forms.Button buttonPreSongAddAll;
+        private System.Windows.Forms.Button buttonBePre;
+        private System.Windows.Forms.Button buttonBeNormal;
     }
 }
 

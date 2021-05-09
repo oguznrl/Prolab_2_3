@@ -77,7 +77,9 @@ namespace Prolab2_3Spo
         private void buttonSingerProsc_Click(object sender, EventArgs e)
         {
             singerProscPanel.Show();
-            
+            songProcsPanel.Hide();
+            albumProscPanel.Hide();
+
         }
         //Admin şarkı  güncelleme panelini kapatır
         private void buttonBackSing_Click(object sender, EventArgs e)
@@ -111,6 +113,8 @@ namespace Prolab2_3Spo
         private void buttonSongProsc_Click(object sender, EventArgs e)
         {
             songProcsPanel.Show();
+            singerProscPanel.Hide();
+            albumProscPanel.Hide();
         }
         //Admin şarkı düzenlemesi yaptığı panel görünmez olur
         private void buttonBackSong_Click(object sender, EventArgs e)
@@ -160,6 +164,8 @@ namespace Prolab2_3Spo
         private void buttonAlbumProsc_Click(object sender, EventArgs e)
         {
             albumProscPanel.Show();
+            singerProscPanel.Hide();
+            songProcsPanel.Hide();
         }
         //Albüm Güncelleme paneli görünmez olur
         private void buttonBackAlbum_Click(object sender, EventArgs e)
@@ -284,40 +290,71 @@ namespace Prolab2_3Spo
             premiumUserPanel.Hide();
             userloginPanel.Show();
         }
+        //Premium kullanıcı premiumdan ayrılır
+        private void buttonBeNormal_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Premiumdan Ayrıldınız");
+        }
         //Jazz şarkı listesini premium kullanıcı için açar
         private void buttonPremiumJazz_Click(object sender, EventArgs e)
         {
             jazzPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            
         }
         //Pop şarkı listesini premium kullanıcı için açar
         private void buttonPremiumPop_Click(object sender, EventArgs e)
         {
             popPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            jazzPanel.Hide();
+            
         }
         //Klasik şarkı listesini premium kullanıcı için açar
         private void buttonPremiumClassic_Click(object sender, EventArgs e)
         {
             classicPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            
         }
         //Şarkı arama panelini premium kullanıcı için açar
         private void buttonPremiumSearch_Click(object sender, EventArgs e)
         {
             searchPanel.Show();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            
         }
         //TOP10 panelini premium kullanıcı için açar
         private void buttonPreTop_Click(object sender, EventArgs e)
         {
             topTenPanel.Show();
+            searchPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            
         }
-
 
         /*
          * 
          *Normal kullanıcı paneli işlemleri 
          *
          */
+        
         private void buttonNormalExit_Click(object sender, EventArgs e)
         {
+            userloginPanel.Show();
             searchPanel.Hide();
             topTenPanel.Hide();
             classicPanel.Hide();
@@ -325,38 +362,91 @@ namespace Prolab2_3Spo
             jazzPanel.Hide();
             premiumUserPanel.Hide();
             preSearchPanel.Hide();
+            followPanel.Hide();
             normalUserPanel.Hide();
-            userloginPanel.Show();
         }
         //Jazz şarkı listesini normal kullanıcı için gösterir
         private void buttonNormalJazz_Click(object sender, EventArgs e)
         {
             jazzPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            premiumUserPanel.Hide();
+            preSearchPanel.Hide();
+            followPanel.Hide();
+            
         }
         //Pop şarkı listesini normal kullanıcı için gösterir
         private void buttonNormalPop_Click(object sender, EventArgs e)
         {
             popPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            jazzPanel.Hide();
+            premiumUserPanel.Hide();
+            preSearchPanel.Hide();
+            followPanel.Hide();
+            
         }
         //Klasik şarkı listesini normal kullanıcı için gösterir
         private void buttonNormalClassic_Click(object sender, EventArgs e)
         {
             classicPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            premiumUserPanel.Hide();
+            preSearchPanel.Hide();
+            followPanel.Hide();
+            
         }
         //Şarkı arama panelini normal kullanıcı için açar
         private void buttonNormalSearchSong_Click(object sender, EventArgs e)
         {
             searchPanel.Show();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            premiumUserPanel.Hide();
+            preSearchPanel.Hide();
+            followPanel.Hide();
+            
         }
         //TOP10 panelini normal kullanıcı için açar
         private void buttonNormalTop_Click(object sender, EventArgs e)
         {
             topTenPanel.Show();
+            searchPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            premiumUserPanel.Hide();
+            preSearchPanel.Hide();
+            followPanel.Hide();
+            
         }
         //Premium kullanıcı arama panelini normal kullanıcı için açar
         private void buttonNormalSearchPre_Click(object sender, EventArgs e)
         {
             preSearchPanel.Show();
+            searchPanel.Hide();
+            topTenPanel.Hide();
+            classicPanel.Hide();
+            popPanel.Hide();
+            jazzPanel.Hide();
+            premiumUserPanel.Hide();
+            followPanel.Hide();
+            
+        }
+        //Normal kullanıcı premium olur
+        private void buttonBePre_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Premium üyeliğe Hoşgeldiniz!!!");
         }
         /*
          *Jazz paneli işlemleri 
@@ -501,5 +591,6 @@ namespace Prolab2_3Spo
         {
 
         }
+        
     }
 }
