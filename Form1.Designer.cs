@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.registerPanel = new System.Windows.Forms.Panel();
+            this.textNewCountry = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.buttonRegBack = new System.Windows.Forms.Button();
             this.textNewUsMail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,9 +48,8 @@
             this.buttonUserLogBack = new System.Windows.Forms.Button();
             this.textUserPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textUserMail = new System.Windows.Forms.TextBox();
+            this.textUserName = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.adminPanel = new System.Windows.Forms.Panel();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -58,6 +59,10 @@
             this.buttonAdminLog = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.adminProscPanel = new System.Windows.Forms.Panel();
+            this.buttonExitAdmin = new System.Windows.Forms.Button();
+            this.buttonSongProsc = new System.Windows.Forms.Button();
+            this.buttonAlbumProsc = new System.Windows.Forms.Button();
+            this.buttonSingerProsc = new System.Windows.Forms.Button();
             this.songProcsPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -85,6 +90,8 @@
             this.buttonUpdateSing = new System.Windows.Forms.Button();
             this.buttonBackSing = new System.Windows.Forms.Button();
             this.albumProscPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textAlbumSingerAdd = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -95,10 +102,6 @@
             this.buttonDeleteAlbum = new System.Windows.Forms.Button();
             this.buttonUpdateAlbum = new System.Windows.Forms.Button();
             this.buttonBackAlbum = new System.Windows.Forms.Button();
-            this.buttonExitAdmin = new System.Windows.Forms.Button();
-            this.buttonSongProsc = new System.Windows.Forms.Button();
-            this.buttonAlbumProsc = new System.Windows.Forms.Button();
-            this.buttonSingerProsc = new System.Windows.Forms.Button();
             this.premiumUserPanel = new System.Windows.Forms.Panel();
             this.buttonBeNormal = new System.Windows.Forms.Button();
             this.buttonPreTop = new System.Windows.Forms.Button();
@@ -171,8 +174,46 @@
             this.buttonPreSongListPop = new System.Windows.Forms.Button();
             this.buttonPreSongListJazz = new System.Windows.Forms.Button();
             this.buttonPreSongListBack = new System.Windows.Forms.Button();
-            this.textNewCountry = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.songUpdatePanel = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textSongType = new System.Windows.Forms.TextBox();
+            this.textSongSingerUpdate = new System.Windows.Forms.TextBox();
+            this.textSongAlbumUpdate = new System.Windows.Forms.TextBox();
+            this.textSongLongUpdate = new System.Windows.Forms.TextBox();
+            this.textSongDateUpdate = new System.Windows.Forms.TextBox();
+            this.textSongNameUpdate = new System.Windows.Forms.TextBox();
+            this.buttonApplyUpdateSong = new System.Windows.Forms.Button();
+            this.buttonBackUpdateSong = new System.Windows.Forms.Button();
+            this.singerUpdatePanel = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textSingerCountryUpdate = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textSingerNameUpdate = new System.Windows.Forms.TextBox();
+            this.buttonApplyUpdateSinger = new System.Windows.Forms.Button();
+            this.buttonBackUpdateSinger = new System.Windows.Forms.Button();
+            this.albumUpdatePanel = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textAlbumSingerUpdate = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textAlbumTypeUpdate = new System.Windows.Forms.TextBox();
+            this.textAlbumDateUpdate = new System.Windows.Forms.TextBox();
+            this.textAlbumNameUpdate = new System.Windows.Forms.TextBox();
+            this.buttonApplyUpdateAlbum = new System.Windows.Forms.Button();
+            this.buttonBackUpdateAlbum = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.showPassLog = new System.Windows.Forms.CheckBox();
+            this.showPassAdmin = new System.Windows.Forms.CheckBox();
+            this.showRegAdmin = new System.Windows.Forms.CheckBox();
             this.registerPanel.SuspendLayout();
             this.logPanel.SuspendLayout();
             this.userloginPanel.SuspendLayout();
@@ -191,10 +232,14 @@
             this.topTenPanel.SuspendLayout();
             this.followPanel.SuspendLayout();
             this.preSongListPanel.SuspendLayout();
+            this.songUpdatePanel.SuspendLayout();
+            this.singerUpdatePanel.SuspendLayout();
+            this.albumUpdatePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // registerPanel
             // 
+            this.registerPanel.Controls.Add(this.showRegAdmin);
             this.registerPanel.Controls.Add(this.textNewCountry);
             this.registerPanel.Controls.Add(this.label23);
             this.registerPanel.Controls.Add(this.buttonRegBack);
@@ -211,6 +256,22 @@
             this.registerPanel.Name = "registerPanel";
             this.registerPanel.Size = new System.Drawing.Size(426, 303);
             this.registerPanel.TabIndex = 0;
+            // 
+            // textNewCountry
+            // 
+            this.textNewCountry.Location = new System.Drawing.Point(117, 59);
+            this.textNewCountry.Name = "textNewCountry";
+            this.textNewCountry.Size = new System.Drawing.Size(100, 22);
+            this.textNewCountry.TabIndex = 16;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 17);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Ülke:";
             // 
             // buttonRegBack
             // 
@@ -329,14 +390,16 @@
             // 
             // userloginPanel
             // 
+            this.userloginPanel.Controls.Add(this.showPassLog);
+            this.userloginPanel.Controls.Add(this.label40);
             this.userloginPanel.Controls.Add(this.buttonUserLogBack);
             this.userloginPanel.Controls.Add(this.textUserPass);
             this.userloginPanel.Controls.Add(this.label2);
-            this.userloginPanel.Controls.Add(this.textUserMail);
+            this.userloginPanel.Controls.Add(this.textUserName);
+            this.userloginPanel.Controls.Add(this.adminPanel);
             this.userloginPanel.Controls.Add(this.buttonLogin);
-            this.userloginPanel.Controls.Add(this.label1);
             this.userloginPanel.Controls.Add(this.buttonRegister);
-            this.userloginPanel.Location = new System.Drawing.Point(12, 12);
+            this.userloginPanel.Location = new System.Drawing.Point(441, 12);
             this.userloginPanel.Name = "userloginPanel";
             this.userloginPanel.Size = new System.Drawing.Size(426, 303);
             this.userloginPanel.TabIndex = 1;
@@ -368,12 +431,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Şifre:";
             // 
-            // textUserMail
+            // textUserName
             // 
-            this.textUserMail.Location = new System.Drawing.Point(102, 3);
-            this.textUserMail.Name = "textUserMail";
-            this.textUserMail.Size = new System.Drawing.Size(100, 22);
-            this.textUserMail.TabIndex = 3;
+            this.textUserName.Location = new System.Drawing.Point(102, 3);
+            this.textUserName.Name = "textUserName";
+            this.textUserName.Size = new System.Drawing.Size(100, 22);
+            this.textUserName.TabIndex = 3;
             // 
             // buttonLogin
             // 
@@ -384,15 +447,6 @@
             this.buttonLogin.Text = "Giriş";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "email:";
             // 
             // buttonRegister
             // 
@@ -406,13 +460,14 @@
             // 
             // adminPanel
             // 
+            this.adminPanel.Controls.Add(this.showPassAdmin);
             this.adminPanel.Controls.Add(this.buttonBack);
             this.adminPanel.Controls.Add(this.textAdminPass);
             this.adminPanel.Controls.Add(this.label6);
             this.adminPanel.Controls.Add(this.textAdminName);
             this.adminPanel.Controls.Add(this.buttonAdminLog);
             this.adminPanel.Controls.Add(this.label7);
-            this.adminPanel.Location = new System.Drawing.Point(12, 12);
+            this.adminPanel.Location = new System.Drawing.Point(0, 0);
             this.adminPanel.Name = "adminPanel";
             this.adminPanel.Size = new System.Drawing.Size(426, 303);
             this.adminPanel.TabIndex = 6;
@@ -472,17 +527,54 @@
             // 
             // adminProscPanel
             // 
-            this.adminProscPanel.Controls.Add(this.songProcsPanel);
-            this.adminProscPanel.Controls.Add(this.singerProscPanel);
-            this.adminProscPanel.Controls.Add(this.albumProscPanel);
             this.adminProscPanel.Controls.Add(this.buttonExitAdmin);
             this.adminProscPanel.Controls.Add(this.buttonSongProsc);
             this.adminProscPanel.Controls.Add(this.buttonAlbumProsc);
             this.adminProscPanel.Controls.Add(this.buttonSingerProsc);
-            this.adminProscPanel.Location = new System.Drawing.Point(636, 9);
+            this.adminProscPanel.Location = new System.Drawing.Point(909, 9);
             this.adminProscPanel.Name = "adminProscPanel";
             this.adminProscPanel.Size = new System.Drawing.Size(568, 367);
             this.adminProscPanel.TabIndex = 7;
+            // 
+            // buttonExitAdmin
+            // 
+            this.buttonExitAdmin.Location = new System.Drawing.Point(3, 108);
+            this.buttonExitAdmin.Name = "buttonExitAdmin";
+            this.buttonExitAdmin.Size = new System.Drawing.Size(121, 29);
+            this.buttonExitAdmin.TabIndex = 3;
+            this.buttonExitAdmin.Text = "Çıkış";
+            this.buttonExitAdmin.UseVisualStyleBackColor = true;
+            this.buttonExitAdmin.Click += new System.EventHandler(this.buttonExitAdmin_Click);
+            // 
+            // buttonSongProsc
+            // 
+            this.buttonSongProsc.Location = new System.Drawing.Point(3, 38);
+            this.buttonSongProsc.Name = "buttonSongProsc";
+            this.buttonSongProsc.Size = new System.Drawing.Size(121, 29);
+            this.buttonSongProsc.TabIndex = 2;
+            this.buttonSongProsc.Text = "Şarkı İşlemleri";
+            this.buttonSongProsc.UseVisualStyleBackColor = true;
+            this.buttonSongProsc.Click += new System.EventHandler(this.buttonSongProsc_Click);
+            // 
+            // buttonAlbumProsc
+            // 
+            this.buttonAlbumProsc.Location = new System.Drawing.Point(3, 73);
+            this.buttonAlbumProsc.Name = "buttonAlbumProsc";
+            this.buttonAlbumProsc.Size = new System.Drawing.Size(121, 29);
+            this.buttonAlbumProsc.TabIndex = 1;
+            this.buttonAlbumProsc.Text = "Albüm İşlemleri";
+            this.buttonAlbumProsc.UseVisualStyleBackColor = true;
+            this.buttonAlbumProsc.Click += new System.EventHandler(this.buttonAlbumProsc_Click);
+            // 
+            // buttonSingerProsc
+            // 
+            this.buttonSingerProsc.Location = new System.Drawing.Point(3, 3);
+            this.buttonSingerProsc.Name = "buttonSingerProsc";
+            this.buttonSingerProsc.Size = new System.Drawing.Size(121, 29);
+            this.buttonSingerProsc.TabIndex = 0;
+            this.buttonSingerProsc.Text = "Sanatçı İşlemleri";
+            this.buttonSingerProsc.UseVisualStyleBackColor = true;
+            this.buttonSingerProsc.Click += new System.EventHandler(this.buttonSingerProsc_Click);
             // 
             // songProcsPanel
             // 
@@ -502,7 +594,7 @@
             this.songProcsPanel.Controls.Add(this.buttonDeleteSong);
             this.songProcsPanel.Controls.Add(this.buttonUpdateSong);
             this.songProcsPanel.Controls.Add(this.buttonBackSong);
-            this.songProcsPanel.Location = new System.Drawing.Point(136, 108);
+            this.songProcsPanel.Location = new System.Drawing.Point(1483, 9);
             this.songProcsPanel.Name = "songProcsPanel";
             this.songProcsPanel.Size = new System.Drawing.Size(429, 255);
             this.songProcsPanel.TabIndex = 8;
@@ -653,7 +745,7 @@
             this.singerProscPanel.Controls.Add(this.buttonDeleteSing);
             this.singerProscPanel.Controls.Add(this.buttonUpdateSing);
             this.singerProscPanel.Controls.Add(this.buttonBackSing);
-            this.singerProscPanel.Location = new System.Drawing.Point(136, 108);
+            this.singerProscPanel.Location = new System.Drawing.Point(1036, 385);
             this.singerProscPanel.Name = "singerProscPanel";
             this.singerProscPanel.Size = new System.Drawing.Size(429, 255);
             this.singerProscPanel.TabIndex = 8;
@@ -732,6 +824,8 @@
             // 
             // albumProscPanel
             // 
+            this.albumProscPanel.Controls.Add(this.label1);
+            this.albumProscPanel.Controls.Add(this.textAlbumSingerAdd);
             this.albumProscPanel.Controls.Add(this.label17);
             this.albumProscPanel.Controls.Add(this.label19);
             this.albumProscPanel.Controls.Add(this.label20);
@@ -742,10 +836,26 @@
             this.albumProscPanel.Controls.Add(this.buttonDeleteAlbum);
             this.albumProscPanel.Controls.Add(this.buttonUpdateAlbum);
             this.albumProscPanel.Controls.Add(this.buttonBackAlbum);
-            this.albumProscPanel.Location = new System.Drawing.Point(136, 108);
+            this.albumProscPanel.Location = new System.Drawing.Point(1471, 385);
             this.albumProscPanel.Name = "albumProscPanel";
             this.albumProscPanel.Size = new System.Drawing.Size(429, 255);
             this.albumProscPanel.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Sanatçıları:";
+            // 
+            // textAlbumSingerAdd
+            // 
+            this.textAlbumSingerAdd.Location = new System.Drawing.Point(143, 87);
+            this.textAlbumSingerAdd.Name = "textAlbumSingerAdd";
+            this.textAlbumSingerAdd.Size = new System.Drawing.Size(100, 22);
+            this.textAlbumSingerAdd.TabIndex = 29;
             // 
             // label17
             // 
@@ -834,46 +944,6 @@
             this.buttonBackAlbum.Text = "Geri";
             this.buttonBackAlbum.UseVisualStyleBackColor = true;
             this.buttonBackAlbum.Click += new System.EventHandler(this.buttonBackAlbum_Click);
-            // 
-            // buttonExitAdmin
-            // 
-            this.buttonExitAdmin.Location = new System.Drawing.Point(3, 108);
-            this.buttonExitAdmin.Name = "buttonExitAdmin";
-            this.buttonExitAdmin.Size = new System.Drawing.Size(121, 29);
-            this.buttonExitAdmin.TabIndex = 3;
-            this.buttonExitAdmin.Text = "Çıkış";
-            this.buttonExitAdmin.UseVisualStyleBackColor = true;
-            this.buttonExitAdmin.Click += new System.EventHandler(this.buttonExitAdmin_Click);
-            // 
-            // buttonSongProsc
-            // 
-            this.buttonSongProsc.Location = new System.Drawing.Point(3, 38);
-            this.buttonSongProsc.Name = "buttonSongProsc";
-            this.buttonSongProsc.Size = new System.Drawing.Size(121, 29);
-            this.buttonSongProsc.TabIndex = 2;
-            this.buttonSongProsc.Text = "Şarkı İşlemleri";
-            this.buttonSongProsc.UseVisualStyleBackColor = true;
-            this.buttonSongProsc.Click += new System.EventHandler(this.buttonSongProsc_Click);
-            // 
-            // buttonAlbumProsc
-            // 
-            this.buttonAlbumProsc.Location = new System.Drawing.Point(3, 73);
-            this.buttonAlbumProsc.Name = "buttonAlbumProsc";
-            this.buttonAlbumProsc.Size = new System.Drawing.Size(121, 29);
-            this.buttonAlbumProsc.TabIndex = 1;
-            this.buttonAlbumProsc.Text = "Albüm İşlemleri";
-            this.buttonAlbumProsc.UseVisualStyleBackColor = true;
-            this.buttonAlbumProsc.Click += new System.EventHandler(this.buttonAlbumProsc_Click);
-            // 
-            // buttonSingerProsc
-            // 
-            this.buttonSingerProsc.Location = new System.Drawing.Point(3, 3);
-            this.buttonSingerProsc.Name = "buttonSingerProsc";
-            this.buttonSingerProsc.Size = new System.Drawing.Size(121, 29);
-            this.buttonSingerProsc.TabIndex = 0;
-            this.buttonSingerProsc.Text = "Sanatçı İşlemleri";
-            this.buttonSingerProsc.UseVisualStyleBackColor = true;
-            this.buttonSingerProsc.Click += new System.EventHandler(this.buttonSingerProsc_Click);
             // 
             // premiumUserPanel
             // 
@@ -1613,37 +1683,400 @@
             this.buttonPreSongListBack.UseVisualStyleBackColor = true;
             this.buttonPreSongListBack.Click += new System.EventHandler(this.buttonPreSongListBack_Click);
             // 
-            // textNewCountry
+            // songUpdatePanel
             // 
-            this.textNewCountry.Location = new System.Drawing.Point(117, 59);
-            this.textNewCountry.Name = "textNewCountry";
-            this.textNewCountry.Size = new System.Drawing.Size(100, 22);
-            this.textNewCountry.TabIndex = 16;
-            this.textNewCountry.UseSystemPasswordChar = true;
+            this.songUpdatePanel.Controls.Add(this.label36);
+            this.songUpdatePanel.Controls.Add(this.label24);
+            this.songUpdatePanel.Controls.Add(this.label25);
+            this.songUpdatePanel.Controls.Add(this.label26);
+            this.songUpdatePanel.Controls.Add(this.label27);
+            this.songUpdatePanel.Controls.Add(this.label28);
+            this.songUpdatePanel.Controls.Add(this.label29);
+            this.songUpdatePanel.Controls.Add(this.textSongType);
+            this.songUpdatePanel.Controls.Add(this.textSongSingerUpdate);
+            this.songUpdatePanel.Controls.Add(this.textSongAlbumUpdate);
+            this.songUpdatePanel.Controls.Add(this.textSongLongUpdate);
+            this.songUpdatePanel.Controls.Add(this.textSongDateUpdate);
+            this.songUpdatePanel.Controls.Add(this.textSongNameUpdate);
+            this.songUpdatePanel.Controls.Add(this.buttonApplyUpdateSong);
+            this.songUpdatePanel.Controls.Add(this.buttonBackUpdateSong);
+            this.songUpdatePanel.Location = new System.Drawing.Point(185, 670);
+            this.songUpdatePanel.Name = "songUpdatePanel";
+            this.songUpdatePanel.Size = new System.Drawing.Size(429, 255);
+            this.songUpdatePanel.TabIndex = 30;
             // 
-            // label23
+            // label24
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 62);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 17);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "Ülke:";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(7, 185);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(42, 17);
+            this.label24.TabIndex = 29;
+            this.label24.Text = "Türü:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(7, 72);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(71, 17);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "Müzisyen:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 100);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(51, 17);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Albüm:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 128);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(108, 17);
+            this.label27.TabIndex = 17;
+            this.label27.Text = "Şarkı Uzunluğu:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(5, 157);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(128, 17);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "Yayımlanma Tarihi:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 44);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(72, 17);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Şarkı İsmi:";
+            // 
+            // textSongType
+            // 
+            this.textSongType.Location = new System.Drawing.Point(143, 185);
+            this.textSongType.Name = "textSongType";
+            this.textSongType.Size = new System.Drawing.Size(100, 22);
+            this.textSongType.TabIndex = 24;
+            // 
+            // textSongSingerUpdate
+            // 
+            this.textSongSingerUpdate.Location = new System.Drawing.Point(143, 72);
+            this.textSongSingerUpdate.Name = "textSongSingerUpdate";
+            this.textSongSingerUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSongSingerUpdate.TabIndex = 13;
+            // 
+            // textSongAlbumUpdate
+            // 
+            this.textSongAlbumUpdate.Location = new System.Drawing.Point(143, 100);
+            this.textSongAlbumUpdate.Name = "textSongAlbumUpdate";
+            this.textSongAlbumUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSongAlbumUpdate.TabIndex = 12;
+            // 
+            // textSongLongUpdate
+            // 
+            this.textSongLongUpdate.Location = new System.Drawing.Point(143, 128);
+            this.textSongLongUpdate.Name = "textSongLongUpdate";
+            this.textSongLongUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSongLongUpdate.TabIndex = 11;
+            // 
+            // textSongDateUpdate
+            // 
+            this.textSongDateUpdate.Location = new System.Drawing.Point(143, 157);
+            this.textSongDateUpdate.Name = "textSongDateUpdate";
+            this.textSongDateUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSongDateUpdate.TabIndex = 9;
+            // 
+            // textSongNameUpdate
+            // 
+            this.textSongNameUpdate.Location = new System.Drawing.Point(143, 44);
+            this.textSongNameUpdate.Name = "textSongNameUpdate";
+            this.textSongNameUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSongNameUpdate.TabIndex = 8;
+            // 
+            // buttonApplyUpdateSong
+            // 
+            this.buttonApplyUpdateSong.Location = new System.Drawing.Point(270, 229);
+            this.buttonApplyUpdateSong.Name = "buttonApplyUpdateSong";
+            this.buttonApplyUpdateSong.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplyUpdateSong.TabIndex = 5;
+            this.buttonApplyUpdateSong.Text = "Güncelle";
+            this.buttonApplyUpdateSong.UseVisualStyleBackColor = true;
+            this.buttonApplyUpdateSong.Click += new System.EventHandler(this.buttonApplyUpdateSong_Click);
+            // 
+            // buttonBackUpdateSong
+            // 
+            this.buttonBackUpdateSong.Location = new System.Drawing.Point(351, 229);
+            this.buttonBackUpdateSong.Name = "buttonBackUpdateSong";
+            this.buttonBackUpdateSong.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackUpdateSong.TabIndex = 4;
+            this.buttonBackUpdateSong.Text = "Geri";
+            this.buttonBackUpdateSong.UseVisualStyleBackColor = true;
+            this.buttonBackUpdateSong.Click += new System.EventHandler(this.buttonBackUpdateSong_Click);
+            // 
+            // singerUpdatePanel
+            // 
+            this.singerUpdatePanel.Controls.Add(this.label37);
+            this.singerUpdatePanel.Controls.Add(this.label30);
+            this.singerUpdatePanel.Controls.Add(this.textSingerCountryUpdate);
+            this.singerUpdatePanel.Controls.Add(this.label31);
+            this.singerUpdatePanel.Controls.Add(this.textSingerNameUpdate);
+            this.singerUpdatePanel.Controls.Add(this.buttonApplyUpdateSinger);
+            this.singerUpdatePanel.Controls.Add(this.buttonBackUpdateSinger);
+            this.singerUpdatePanel.Location = new System.Drawing.Point(617, 670);
+            this.singerUpdatePanel.Name = "singerUpdatePanel";
+            this.singerUpdatePanel.Size = new System.Drawing.Size(429, 255);
+            this.singerUpdatePanel.TabIndex = 10;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(1, 77);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(50, 17);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Ülkesi:";
+            // 
+            // textSingerCountryUpdate
+            // 
+            this.textSingerCountryUpdate.Location = new System.Drawing.Point(94, 77);
+            this.textSingerCountryUpdate.Name = "textSingerCountryUpdate";
+            this.textSingerCountryUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSingerCountryUpdate.TabIndex = 8;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(1, 49);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 17);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Sanatçı İsmi:";
+            // 
+            // textSingerNameUpdate
+            // 
+            this.textSingerNameUpdate.Location = new System.Drawing.Point(94, 49);
+            this.textSingerNameUpdate.Name = "textSingerNameUpdate";
+            this.textSingerNameUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textSingerNameUpdate.TabIndex = 4;
+            // 
+            // buttonApplyUpdateSinger
+            // 
+            this.buttonApplyUpdateSinger.Location = new System.Drawing.Point(270, 229);
+            this.buttonApplyUpdateSinger.Name = "buttonApplyUpdateSinger";
+            this.buttonApplyUpdateSinger.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplyUpdateSinger.TabIndex = 1;
+            this.buttonApplyUpdateSinger.Text = "Güncelle";
+            this.buttonApplyUpdateSinger.UseVisualStyleBackColor = true;
+            this.buttonApplyUpdateSinger.Click += new System.EventHandler(this.buttonApplyUpdateSinger_Click);
+            // 
+            // buttonBackUpdateSinger
+            // 
+            this.buttonBackUpdateSinger.Location = new System.Drawing.Point(351, 229);
+            this.buttonBackUpdateSinger.Name = "buttonBackUpdateSinger";
+            this.buttonBackUpdateSinger.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackUpdateSinger.TabIndex = 0;
+            this.buttonBackUpdateSinger.Text = "Geri";
+            this.buttonBackUpdateSinger.UseVisualStyleBackColor = true;
+            this.buttonBackUpdateSinger.Click += new System.EventHandler(this.buttonBackUpdateSinger_Click);
+            // 
+            // albumUpdatePanel
+            // 
+            this.albumUpdatePanel.Controls.Add(this.label38);
+            this.albumUpdatePanel.Controls.Add(this.label32);
+            this.albumUpdatePanel.Controls.Add(this.textAlbumSingerUpdate);
+            this.albumUpdatePanel.Controls.Add(this.label33);
+            this.albumUpdatePanel.Controls.Add(this.label34);
+            this.albumUpdatePanel.Controls.Add(this.label35);
+            this.albumUpdatePanel.Controls.Add(this.textAlbumTypeUpdate);
+            this.albumUpdatePanel.Controls.Add(this.textAlbumDateUpdate);
+            this.albumUpdatePanel.Controls.Add(this.textAlbumNameUpdate);
+            this.albumUpdatePanel.Controls.Add(this.buttonApplyUpdateAlbum);
+            this.albumUpdatePanel.Controls.Add(this.buttonBackUpdateAlbum);
+            this.albumUpdatePanel.Location = new System.Drawing.Point(1052, 670);
+            this.albumUpdatePanel.Name = "albumUpdatePanel";
+            this.albumUpdatePanel.Size = new System.Drawing.Size(429, 255);
+            this.albumUpdatePanel.TabIndex = 31;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(8, 135);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(78, 17);
+            this.label32.TabIndex = 30;
+            this.label32.Text = "Sanatçıları:";
+            // 
+            // textAlbumSingerUpdate
+            // 
+            this.textAlbumSingerUpdate.Location = new System.Drawing.Point(145, 135);
+            this.textAlbumSingerUpdate.Name = "textAlbumSingerUpdate";
+            this.textAlbumSingerUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textAlbumSingerUpdate.TabIndex = 29;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(8, 79);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(85, 17);
+            this.label33.TabIndex = 28;
+            this.label33.Text = "Albüm Türü:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(8, 107);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(128, 17);
+            this.label34.TabIndex = 26;
+            this.label34.Text = "Yayımlanma Tarihi:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(8, 51);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(79, 17);
+            this.label35.TabIndex = 25;
+            this.label35.Text = "Albüm İsmi:";
+            // 
+            // textAlbumTypeUpdate
+            // 
+            this.textAlbumTypeUpdate.Location = new System.Drawing.Point(145, 79);
+            this.textAlbumTypeUpdate.Name = "textAlbumTypeUpdate";
+            this.textAlbumTypeUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textAlbumTypeUpdate.TabIndex = 23;
+            // 
+            // textAlbumDateUpdate
+            // 
+            this.textAlbumDateUpdate.Location = new System.Drawing.Point(145, 107);
+            this.textAlbumDateUpdate.Name = "textAlbumDateUpdate";
+            this.textAlbumDateUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textAlbumDateUpdate.TabIndex = 21;
+            // 
+            // textAlbumNameUpdate
+            // 
+            this.textAlbumNameUpdate.Location = new System.Drawing.Point(145, 51);
+            this.textAlbumNameUpdate.Name = "textAlbumNameUpdate";
+            this.textAlbumNameUpdate.Size = new System.Drawing.Size(100, 22);
+            this.textAlbumNameUpdate.TabIndex = 20;
+            // 
+            // buttonApplyUpdateAlbum
+            // 
+            this.buttonApplyUpdateAlbum.Location = new System.Drawing.Point(270, 227);
+            this.buttonApplyUpdateAlbum.Name = "buttonApplyUpdateAlbum";
+            this.buttonApplyUpdateAlbum.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplyUpdateAlbum.TabIndex = 9;
+            this.buttonApplyUpdateAlbum.Text = "Güncelle";
+            this.buttonApplyUpdateAlbum.UseVisualStyleBackColor = true;
+            this.buttonApplyUpdateAlbum.Click += new System.EventHandler(this.buttonApplyUpdateAlbum_Click);
+            // 
+            // buttonBackUpdateAlbum
+            // 
+            this.buttonBackUpdateAlbum.Location = new System.Drawing.Point(351, 227);
+            this.buttonBackUpdateAlbum.Name = "buttonBackUpdateAlbum";
+            this.buttonBackUpdateAlbum.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackUpdateAlbum.TabIndex = 8;
+            this.buttonBackUpdateAlbum.Text = "Geri";
+            this.buttonBackUpdateAlbum.UseVisualStyleBackColor = true;
+            this.buttonBackUpdateAlbum.Click += new System.EventHandler(this.buttonBackUpdateAlbum_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 13);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(126, 17);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Güncelleme Paneli";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(3, 13);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(126, 17);
+            this.label37.TabIndex = 31;
+            this.label37.Text = "Güncelleme Paneli";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(3, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(126, 17);
+            this.label38.TabIndex = 31;
+            this.label38.Text = "Güncelleme Paneli";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(8, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(88, 17);
+            this.label40.TabIndex = 7;
+            this.label40.Text = "Kullanıcı Adı:";
+            // 
+            // showPassLog
+            // 
+            this.showPassLog.AutoSize = true;
+            this.showPassLog.Location = new System.Drawing.Point(208, 35);
+            this.showPassLog.Name = "showPassLog";
+            this.showPassLog.Size = new System.Drawing.Size(111, 21);
+            this.showPassLog.TabIndex = 8;
+            this.showPassLog.Text = "şifreyi göster";
+            this.showPassLog.UseVisualStyleBackColor = true;
+            this.showPassLog.CheckedChanged += new System.EventHandler(this.showPassLog_CheckedChanged);
+            // 
+            // showPassAdmin
+            // 
+            this.showPassAdmin.AutoSize = true;
+            this.showPassAdmin.Location = new System.Drawing.Point(208, 33);
+            this.showPassAdmin.Name = "showPassAdmin";
+            this.showPassAdmin.Size = new System.Drawing.Size(111, 21);
+            this.showPassAdmin.TabIndex = 9;
+            this.showPassAdmin.Text = "şifreyi göster";
+            this.showPassAdmin.UseVisualStyleBackColor = true;
+            this.showPassAdmin.CheckedChanged += new System.EventHandler(this.showPassAdmin_CheckedChanged);
+            // 
+            // showRegAdmin
+            // 
+            this.showRegAdmin.AutoSize = true;
+            this.showRegAdmin.Location = new System.Drawing.Point(223, 117);
+            this.showRegAdmin.Name = "showRegAdmin";
+            this.showRegAdmin.Size = new System.Drawing.Size(111, 21);
+            this.showRegAdmin.TabIndex = 17;
+            this.showRegAdmin.Text = "şifreyi göster";
+            this.showRegAdmin.UseVisualStyleBackColor = true;
+            this.showRegAdmin.CheckedChanged += new System.EventHandler(this.showRegAdmin_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 845);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.albumUpdatePanel);
+            this.Controls.Add(this.singerUpdatePanel);
+            this.Controls.Add(this.songUpdatePanel);
+            this.Controls.Add(this.albumProscPanel);
+            this.Controls.Add(this.singerProscPanel);
+            this.Controls.Add(this.songProcsPanel);
+            this.Controls.Add(this.userloginPanel);
+            this.Controls.Add(this.logPanel);
             this.Controls.Add(this.followPanel);
             this.Controls.Add(this.preSongListPanel);
             this.Controls.Add(this.topTenPanel);
             this.Controls.Add(this.popPanel);
             this.Controls.Add(this.normalUserPanel);
-            this.Controls.Add(this.userloginPanel);
-            this.Controls.Add(this.logPanel);
             this.Controls.Add(this.classicPanel);
-            this.Controls.Add(this.adminPanel);
             this.Controls.Add(this.premiumUserPanel);
             this.Controls.Add(this.preSearchPanel);
             this.Controls.Add(this.adminProscPanel);
@@ -1683,6 +2116,12 @@
             this.followPanel.ResumeLayout(false);
             this.followPanel.PerformLayout();
             this.preSongListPanel.ResumeLayout(false);
+            this.songUpdatePanel.ResumeLayout(false);
+            this.songUpdatePanel.PerformLayout();
+            this.singerUpdatePanel.ResumeLayout(false);
+            this.singerUpdatePanel.PerformLayout();
+            this.albumUpdatePanel.ResumeLayout(false);
+            this.albumUpdatePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1693,7 +2132,6 @@
         private System.Windows.Forms.Panel userloginPanel;
         private System.Windows.Forms.Button buttonRegConf;
         private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNewPassConf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textNewPass;
@@ -1702,7 +2140,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textUserPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textUserMail;
+        private System.Windows.Forms.TextBox textUserName;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Panel logPanel;
         private System.Windows.Forms.Button buttonLogAd;
@@ -1834,6 +2272,48 @@
         private System.Windows.Forms.Button buttonBeNormal;
         private System.Windows.Forms.TextBox textNewCountry;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textAlbumSingerAdd;
+        private System.Windows.Forms.Panel songUpdatePanel;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textSongType;
+        private System.Windows.Forms.TextBox textSongSingerUpdate;
+        private System.Windows.Forms.TextBox textSongAlbumUpdate;
+        private System.Windows.Forms.TextBox textSongLongUpdate;
+        private System.Windows.Forms.TextBox textSongDateUpdate;
+        private System.Windows.Forms.TextBox textSongNameUpdate;
+        private System.Windows.Forms.Button buttonApplyUpdateSong;
+        private System.Windows.Forms.Button buttonBackUpdateSong;
+        private System.Windows.Forms.Panel singerUpdatePanel;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textSingerCountryUpdate;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textSingerNameUpdate;
+        private System.Windows.Forms.Button buttonApplyUpdateSinger;
+        private System.Windows.Forms.Button buttonBackUpdateSinger;
+        private System.Windows.Forms.Panel albumUpdatePanel;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textAlbumSingerUpdate;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textAlbumTypeUpdate;
+        private System.Windows.Forms.TextBox textAlbumDateUpdate;
+        private System.Windows.Forms.TextBox textAlbumNameUpdate;
+        private System.Windows.Forms.Button buttonApplyUpdateAlbum;
+        private System.Windows.Forms.Button buttonBackUpdateAlbum;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.CheckBox showPassLog;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.CheckBox showPassAdmin;
+        private System.Windows.Forms.CheckBox showRegAdmin;
     }
 }
 

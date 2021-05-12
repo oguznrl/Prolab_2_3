@@ -91,6 +91,8 @@ namespace Prolab2_3Spo
         {
             String singerName = textSingerNameAdd.Text;
             String singerCountry = textSingerCountryAdd.Text;
+            singerUpdatePanel.Show();
+            
         }
         //Sanatçı bilgisini siler
         private void buttonDeleteSing_Click(object sender, EventArgs e)
@@ -152,6 +154,7 @@ namespace Prolab2_3Spo
             float songLong = float.Parse(songLongTemp);
             String date = textSongDateAdd.Text;
             String songType = textSongTypeAdd.Text;
+            songUpdatePanel.Show();
         }
 
 
@@ -178,6 +181,7 @@ namespace Prolab2_3Spo
             String albumName = textAlbumNameAdd.Text;
             String albumDate = textAlbumDateAdd.Text;
             String albumType = textAlbumTypeAdd.Text;
+            albumUpdatePanel.Show();
         }
         //Album siler
         private void buttonDeleteAlbum_Click(object sender, EventArgs e)
@@ -258,8 +262,8 @@ namespace Prolab2_3Spo
         //Kullanıcı giriş yapar
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            String email = textUserMail.Text;
-            String password = textUserMail.Text;
+            String name = textUserName.Text;
+            String password = textUserName.Text;
             Boolean isPremium = false;
             if (isPremium)
             {
@@ -592,6 +596,110 @@ namespace Prolab2_3Spo
         {
 
         }
-        
+
+
+
+        /*
+         * 
+         *Şarkı güncelleme paneli işlemleri 
+         *
+         */
+
+        //Doldurulan alana göre şarkı günceller
+        private void buttonApplyUpdateSong_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Güncelleme paneliden çıkar
+        private void buttonBackUpdateSong_Click(object sender, EventArgs e)
+        {
+            songUpdatePanel.Hide();
+        }
+
+       /*
+        * 
+        *Sanatçı güncelleme paneli işlemleri 
+        *
+        */
+
+        //Doldurulan alana göre sanatçıyı günceller
+        private void buttonApplyUpdateSinger_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBackUpdateSinger_Click(object sender, EventArgs e)
+        {
+            singerUpdatePanel.Hide();
+        }
+
+
+        /*
+         * 
+         *Albüm güncelleme paneli işlemleri 
+         *
+         */
+
+        //Doldurulan alana göre albümü günceller
+        private void buttonApplyUpdateAlbum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBackUpdateAlbum_Click(object sender, EventArgs e)
+        {
+            albumUpdatePanel.Hide();
+        }
+
+        int logcheckpass = 1;
+
+        //Login ekranında şifreyi gösterir
+        private void showPassLog_CheckedChanged(object sender, EventArgs e)
+        {
+            if (logcheckpass % 2 == 0)
+            {
+                textUserPass.UseSystemPasswordChar = true;
+                logcheckpass++;
+            }
+            else
+            {
+                textUserPass.UseSystemPasswordChar = false;
+                logcheckpass++;
+            }
+            
+        }
+        int admincheckpass = 1;
+        //Admin ekranında şifreyi gösterir
+        private void showPassAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (admincheckpass % 2 == 0)
+            {
+                textAdminPass.UseSystemPasswordChar = true;
+                admincheckpass++;
+            }
+            else
+            {
+                textAdminPass.UseSystemPasswordChar = false;
+                admincheckpass++;
+            }
+        }
+        //kayıt ekranında şifreyi gösterir
+        int regcheckpass = 1;
+
+        private void showRegAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (regcheckpass % 2 == 0)
+            {
+                textNewPass.UseSystemPasswordChar = true;
+                textNewPassConf.UseSystemPasswordChar = true;
+                regcheckpass++;
+            }
+            else
+            {
+                textNewPass.UseSystemPasswordChar = false;
+                textNewPassConf.UseSystemPasswordChar = false;
+                regcheckpass++;
+            }
+        }
     }
 }
