@@ -4,7 +4,7 @@
 
 -Kaydolma kısmında ülke sansürlü gösteriliyor
 
--Kullanıcı giriş kısmında mail yazısını kullanıcı adı ile değiştirilecek
+-Kullanıcı giriş kısmında mail yazısı kullanıcı adı ile değiştirilecek
 
 -Sanatçı-şarkı-albüm güncelleme mantığının değişmesi lazım, isimler güncellenemiyor
 
