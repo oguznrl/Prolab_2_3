@@ -10,3 +10,5 @@
 
 -Şarkı güncellerken dinlenme sayısını güncellemiyoruz?
 
+-Şarkı eklerken yayımlanma tarihi kısmını kaldır
+
