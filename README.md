@@ -8,3 +8,5 @@
 
 -DATE datatype varchar yap.
 
+-Şarkı güncellerken dinlenme sayısını güncellemiyoruz?
+
