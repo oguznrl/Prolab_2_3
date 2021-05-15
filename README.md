@@ -12,6 +12,6 @@
 
 @@oğuz
 
-şarkı eklerken yayımlanma tarihini kaldır
+-şarkı eklerken yayımlanma tarihini kaldır
 
-ülkelere göre top 10 sadece top10 sekmesinde olacak
+-ülkelere göre top 10 sadece top10 sekmesinde olacak
