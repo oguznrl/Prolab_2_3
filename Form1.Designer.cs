@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.registerPanel = new System.Windows.Forms.Panel();
+            this.showRegAdmin = new System.Windows.Forms.CheckBox();
             this.textNewCountry = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.buttonRegBack = new System.Windows.Forms.Button();
@@ -45,19 +46,22 @@
             this.buttonLogAd = new System.Windows.Forms.Button();
             this.buttonLogUser = new System.Windows.Forms.Button();
             this.userloginPanel = new System.Windows.Forms.Panel();
+            this.showPassLog = new System.Windows.Forms.CheckBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.buttonUserLogBack = new System.Windows.Forms.Button();
             this.textUserPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textUserName = new System.Windows.Forms.TextBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.buttonRegister = new System.Windows.Forms.Button();
             this.adminPanel = new System.Windows.Forms.Panel();
+            this.showPassAdmin = new System.Windows.Forms.CheckBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textAdminPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textAdminName = new System.Windows.Forms.TextBox();
             this.buttonAdminLog = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonRegister = new System.Windows.Forms.Button();
             this.adminProscPanel = new System.Windows.Forms.Panel();
             this.buttonExitAdmin = new System.Windows.Forms.Button();
             this.buttonSongProsc = new System.Windows.Forms.Button();
@@ -119,24 +123,18 @@
             this.listSongFounded = new System.Windows.Forms.ListView();
             this.jazzPanel = new System.Windows.Forms.Panel();
             this.buttonJazzUpdate = new System.Windows.Forms.Button();
-            this.comboJazzCountry = new System.Windows.Forms.ComboBox();
-            this.radioTopCountryJazz = new System.Windows.Forms.RadioButton();
             this.radioTopJazz = new System.Windows.Forms.RadioButton();
             this.radioGeneralJazz = new System.Windows.Forms.RadioButton();
             this.buttonJazzBack = new System.Windows.Forms.Button();
             this.listJazz = new System.Windows.Forms.ListView();
             this.popPanel = new System.Windows.Forms.Panel();
             this.buttonPopUpdate = new System.Windows.Forms.Button();
-            this.comboPopCountry = new System.Windows.Forms.ComboBox();
-            this.radioTopCountryPop = new System.Windows.Forms.RadioButton();
             this.radioTopPop = new System.Windows.Forms.RadioButton();
             this.radioGeneralPop = new System.Windows.Forms.RadioButton();
             this.buttonPopBack = new System.Windows.Forms.Button();
             this.listPop = new System.Windows.Forms.ListView();
             this.classicPanel = new System.Windows.Forms.Panel();
             this.buttonClassicUpdate = new System.Windows.Forms.Button();
-            this.comboClassicCountry = new System.Windows.Forms.ComboBox();
-            this.radioTopCountryClassic = new System.Windows.Forms.RadioButton();
             this.radioTopClassic = new System.Windows.Forms.RadioButton();
             this.radioGeneralClassic = new System.Windows.Forms.RadioButton();
             this.buttonClassicBack = new System.Windows.Forms.Button();
@@ -175,6 +173,7 @@
             this.buttonPreSongListJazz = new System.Windows.Forms.Button();
             this.buttonPreSongListBack = new System.Windows.Forms.Button();
             this.songUpdatePanel = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -190,6 +189,7 @@
             this.buttonApplyUpdateSong = new System.Windows.Forms.Button();
             this.buttonBackUpdateSong = new System.Windows.Forms.Button();
             this.singerUpdatePanel = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.textSingerCountryUpdate = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -197,6 +197,7 @@
             this.buttonApplyUpdateSinger = new System.Windows.Forms.Button();
             this.buttonBackUpdateSinger = new System.Windows.Forms.Button();
             this.albumUpdatePanel = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.textAlbumSingerUpdate = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -207,13 +208,10 @@
             this.textAlbumNameUpdate = new System.Windows.Forms.TextBox();
             this.buttonApplyUpdateAlbum = new System.Windows.Forms.Button();
             this.buttonBackUpdateAlbum = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.showPassLog = new System.Windows.Forms.CheckBox();
-            this.showPassAdmin = new System.Windows.Forms.CheckBox();
-            this.showRegAdmin = new System.Windows.Forms.CheckBox();
+            this.radioGeneralTopPanel = new System.Windows.Forms.RadioButton();
+            this.radioCountryTopPanel = new System.Windows.Forms.RadioButton();
+            this.buttonUpdateTopTenList = new System.Windows.Forms.Button();
+            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
             this.registerPanel.SuspendLayout();
             this.logPanel.SuspendLayout();
             this.userloginPanel.SuspendLayout();
@@ -256,6 +254,17 @@
             this.registerPanel.Name = "registerPanel";
             this.registerPanel.Size = new System.Drawing.Size(426, 303);
             this.registerPanel.TabIndex = 0;
+            // 
+            // showRegAdmin
+            // 
+            this.showRegAdmin.AutoSize = true;
+            this.showRegAdmin.Location = new System.Drawing.Point(223, 117);
+            this.showRegAdmin.Name = "showRegAdmin";
+            this.showRegAdmin.Size = new System.Drawing.Size(111, 21);
+            this.showRegAdmin.TabIndex = 17;
+            this.showRegAdmin.Text = "şifreyi göster";
+            this.showRegAdmin.UseVisualStyleBackColor = true;
+            this.showRegAdmin.CheckedChanged += new System.EventHandler(this.showRegAdmin_CheckedChanged);
             // 
             // textNewCountry
             // 
@@ -396,13 +405,32 @@
             this.userloginPanel.Controls.Add(this.textUserPass);
             this.userloginPanel.Controls.Add(this.label2);
             this.userloginPanel.Controls.Add(this.textUserName);
-            this.userloginPanel.Controls.Add(this.adminPanel);
             this.userloginPanel.Controls.Add(this.buttonLogin);
             this.userloginPanel.Controls.Add(this.buttonRegister);
-            this.userloginPanel.Location = new System.Drawing.Point(441, 12);
+            this.userloginPanel.Location = new System.Drawing.Point(12, 12);
             this.userloginPanel.Name = "userloginPanel";
             this.userloginPanel.Size = new System.Drawing.Size(426, 303);
             this.userloginPanel.TabIndex = 1;
+            // 
+            // showPassLog
+            // 
+            this.showPassLog.AutoSize = true;
+            this.showPassLog.Location = new System.Drawing.Point(208, 35);
+            this.showPassLog.Name = "showPassLog";
+            this.showPassLog.Size = new System.Drawing.Size(111, 21);
+            this.showPassLog.TabIndex = 8;
+            this.showPassLog.Text = "şifreyi göster";
+            this.showPassLog.UseVisualStyleBackColor = true;
+            this.showPassLog.CheckedChanged += new System.EventHandler(this.showPassLog_CheckedChanged);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(8, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(88, 17);
+            this.label40.TabIndex = 7;
+            this.label40.Text = "Kullanıcı Adı:";
             // 
             // buttonUserLogBack
             // 
@@ -438,26 +466,6 @@
             this.textUserName.Size = new System.Drawing.Size(100, 22);
             this.textUserName.TabIndex = 3;
             // 
-            // buttonLogin
-            // 
-            this.buttonLogin.Location = new System.Drawing.Point(255, 276);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(81, 24);
-            this.buttonLogin.TabIndex = 2;
-            this.buttonLogin.Text = "Giriş";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // buttonRegister
-            // 
-            this.buttonRegister.Location = new System.Drawing.Point(342, 276);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(81, 24);
-            this.buttonRegister.TabIndex = 0;
-            this.buttonRegister.Text = "Kaydol";
-            this.buttonRegister.UseVisualStyleBackColor = true;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
-            // 
             // adminPanel
             // 
             this.adminPanel.Controls.Add(this.showPassAdmin);
@@ -467,10 +475,21 @@
             this.adminPanel.Controls.Add(this.textAdminName);
             this.adminPanel.Controls.Add(this.buttonAdminLog);
             this.adminPanel.Controls.Add(this.label7);
-            this.adminPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminPanel.Location = new System.Drawing.Point(12, 12);
             this.adminPanel.Name = "adminPanel";
             this.adminPanel.Size = new System.Drawing.Size(426, 303);
             this.adminPanel.TabIndex = 6;
+            // 
+            // showPassAdmin
+            // 
+            this.showPassAdmin.AutoSize = true;
+            this.showPassAdmin.Location = new System.Drawing.Point(208, 33);
+            this.showPassAdmin.Name = "showPassAdmin";
+            this.showPassAdmin.Size = new System.Drawing.Size(111, 21);
+            this.showPassAdmin.TabIndex = 9;
+            this.showPassAdmin.Text = "şifreyi göster";
+            this.showPassAdmin.UseVisualStyleBackColor = true;
+            this.showPassAdmin.CheckedChanged += new System.EventHandler(this.showPassAdmin_CheckedChanged);
             // 
             // buttonBack
             // 
@@ -525,13 +544,39 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Admin Adı:";
             // 
+            // buttonLogin
+            // 
+            this.buttonLogin.Location = new System.Drawing.Point(255, 276);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(81, 24);
+            this.buttonLogin.TabIndex = 2;
+            this.buttonLogin.Text = "Giriş";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            // 
+            // buttonRegister
+            // 
+            this.buttonRegister.Location = new System.Drawing.Point(342, 276);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(81, 24);
+            this.buttonRegister.TabIndex = 0;
+            this.buttonRegister.Text = "Kaydol";
+            this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
             // adminProscPanel
             // 
+            this.adminProscPanel.Controls.Add(this.albumUpdatePanel);
+            this.adminProscPanel.Controls.Add(this.songUpdatePanel);
             this.adminProscPanel.Controls.Add(this.buttonExitAdmin);
             this.adminProscPanel.Controls.Add(this.buttonSongProsc);
+            this.adminProscPanel.Controls.Add(this.singerUpdatePanel);
+            this.adminProscPanel.Controls.Add(this.albumProscPanel);
+            this.adminProscPanel.Controls.Add(this.singerProscPanel);
             this.adminProscPanel.Controls.Add(this.buttonAlbumProsc);
             this.adminProscPanel.Controls.Add(this.buttonSingerProsc);
-            this.adminProscPanel.Location = new System.Drawing.Point(909, 9);
+            this.adminProscPanel.Controls.Add(this.songProcsPanel);
+            this.adminProscPanel.Location = new System.Drawing.Point(444, 12);
             this.adminProscPanel.Name = "adminProscPanel";
             this.adminProscPanel.Size = new System.Drawing.Size(568, 367);
             this.adminProscPanel.TabIndex = 7;
@@ -594,7 +639,7 @@
             this.songProcsPanel.Controls.Add(this.buttonDeleteSong);
             this.songProcsPanel.Controls.Add(this.buttonUpdateSong);
             this.songProcsPanel.Controls.Add(this.buttonBackSong);
-            this.songProcsPanel.Location = new System.Drawing.Point(1483, 9);
+            this.songProcsPanel.Location = new System.Drawing.Point(136, 108);
             this.songProcsPanel.Name = "songProcsPanel";
             this.songProcsPanel.Size = new System.Drawing.Size(429, 255);
             this.songProcsPanel.TabIndex = 8;
@@ -611,7 +656,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 31);
+            this.label16.Location = new System.Drawing.Point(4, 6);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 17);
             this.label16.TabIndex = 19;
@@ -647,7 +692,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 3);
+            this.label10.Location = new System.Drawing.Point(4, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 17);
             this.label10.TabIndex = 14;
@@ -745,7 +790,7 @@
             this.singerProscPanel.Controls.Add(this.buttonDeleteSing);
             this.singerProscPanel.Controls.Add(this.buttonUpdateSing);
             this.singerProscPanel.Controls.Add(this.buttonBackSing);
-            this.singerProscPanel.Location = new System.Drawing.Point(1036, 385);
+            this.singerProscPanel.Location = new System.Drawing.Point(136, 108);
             this.singerProscPanel.Name = "singerProscPanel";
             this.singerProscPanel.Size = new System.Drawing.Size(429, 255);
             this.singerProscPanel.TabIndex = 8;
@@ -836,7 +881,7 @@
             this.albumProscPanel.Controls.Add(this.buttonDeleteAlbum);
             this.albumProscPanel.Controls.Add(this.buttonUpdateAlbum);
             this.albumProscPanel.Controls.Add(this.buttonBackAlbum);
-            this.albumProscPanel.Location = new System.Drawing.Point(1471, 385);
+            this.albumProscPanel.Location = new System.Drawing.Point(136, 108);
             this.albumProscPanel.Name = "albumProscPanel";
             this.albumProscPanel.Size = new System.Drawing.Size(429, 255);
             this.albumProscPanel.TabIndex = 8;
@@ -954,7 +999,7 @@
             this.premiumUserPanel.Controls.Add(this.buttonPremiumClassic);
             this.premiumUserPanel.Controls.Add(this.buttonPremiumPop);
             this.premiumUserPanel.Controls.Add(this.buttonPremiumJazz);
-            this.premiumUserPanel.Location = new System.Drawing.Point(12, 321);
+            this.premiumUserPanel.Location = new System.Drawing.Point(12, 388);
             this.premiumUserPanel.Name = "premiumUserPanel";
             this.premiumUserPanel.Size = new System.Drawing.Size(167, 300);
             this.premiumUserPanel.TabIndex = 9;
@@ -1037,7 +1082,7 @@
             this.searchPanel.Controls.Add(this.textSearchBox);
             this.searchPanel.Controls.Add(this.label18);
             this.searchPanel.Controls.Add(this.listSongFounded);
-            this.searchPanel.Location = new System.Drawing.Point(185, 321);
+            this.searchPanel.Location = new System.Drawing.Point(182, 388);
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(442, 343);
             this.searchPanel.TabIndex = 6;
@@ -1100,45 +1145,24 @@
             // jazzPanel
             // 
             this.jazzPanel.Controls.Add(this.buttonJazzUpdate);
-            this.jazzPanel.Controls.Add(this.comboJazzCountry);
-            this.jazzPanel.Controls.Add(this.radioTopCountryJazz);
             this.jazzPanel.Controls.Add(this.radioTopJazz);
             this.jazzPanel.Controls.Add(this.radioGeneralJazz);
             this.jazzPanel.Controls.Add(this.buttonJazzBack);
             this.jazzPanel.Controls.Add(this.listJazz);
-            this.jazzPanel.Location = new System.Drawing.Point(185, 321);
+            this.jazzPanel.Location = new System.Drawing.Point(182, 388);
             this.jazzPanel.Name = "jazzPanel";
             this.jazzPanel.Size = new System.Drawing.Size(442, 343);
             this.jazzPanel.TabIndex = 5;
             // 
             // buttonJazzUpdate
             // 
-            this.buttonJazzUpdate.Location = new System.Drawing.Point(312, 219);
+            this.buttonJazzUpdate.Location = new System.Drawing.Point(364, 220);
             this.buttonJazzUpdate.Name = "buttonJazzUpdate";
             this.buttonJazzUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonJazzUpdate.TabIndex = 10;
             this.buttonJazzUpdate.Text = "Yenile";
             this.buttonJazzUpdate.UseVisualStyleBackColor = true;
             this.buttonJazzUpdate.Click += new System.EventHandler(this.buttonJazzUpdate_Click);
-            // 
-            // comboJazzCountry
-            // 
-            this.comboJazzCountry.FormattingEnabled = true;
-            this.comboJazzCountry.Location = new System.Drawing.Point(185, 219);
-            this.comboJazzCountry.Name = "comboJazzCountry";
-            this.comboJazzCountry.Size = new System.Drawing.Size(121, 24);
-            this.comboJazzCountry.TabIndex = 9;
-            // 
-            // radioTopCountryJazz
-            // 
-            this.radioTopCountryJazz.AutoSize = true;
-            this.radioTopCountryJazz.Location = new System.Drawing.Point(3, 272);
-            this.radioTopCountryJazz.Name = "radioTopCountryJazz";
-            this.radioTopCountryJazz.Size = new System.Drawing.Size(166, 21);
-            this.radioTopCountryJazz.TabIndex = 8;
-            this.radioTopCountryJazz.TabStop = true;
-            this.radioTopCountryJazz.Text = "Ülkelere Göre Top 10";
-            this.radioTopCountryJazz.UseVisualStyleBackColor = true;
             // 
             // radioTopJazz
             // 
@@ -1184,45 +1208,24 @@
             // popPanel
             // 
             this.popPanel.Controls.Add(this.buttonPopUpdate);
-            this.popPanel.Controls.Add(this.comboPopCountry);
-            this.popPanel.Controls.Add(this.radioTopCountryPop);
             this.popPanel.Controls.Add(this.radioTopPop);
             this.popPanel.Controls.Add(this.radioGeneralPop);
             this.popPanel.Controls.Add(this.buttonPopBack);
             this.popPanel.Controls.Add(this.listPop);
-            this.popPanel.Location = new System.Drawing.Point(185, 321);
+            this.popPanel.Location = new System.Drawing.Point(182, 388);
             this.popPanel.Name = "popPanel";
             this.popPanel.Size = new System.Drawing.Size(442, 343);
             this.popPanel.TabIndex = 6;
             // 
             // buttonPopUpdate
             // 
-            this.buttonPopUpdate.Location = new System.Drawing.Point(314, 219);
+            this.buttonPopUpdate.Location = new System.Drawing.Point(364, 222);
             this.buttonPopUpdate.Name = "buttonPopUpdate";
             this.buttonPopUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonPopUpdate.TabIndex = 15;
             this.buttonPopUpdate.Text = "Yenile";
             this.buttonPopUpdate.UseVisualStyleBackColor = true;
             this.buttonPopUpdate.Click += new System.EventHandler(this.buttonPopUpdate_Click);
-            // 
-            // comboPopCountry
-            // 
-            this.comboPopCountry.FormattingEnabled = true;
-            this.comboPopCountry.Location = new System.Drawing.Point(187, 219);
-            this.comboPopCountry.Name = "comboPopCountry";
-            this.comboPopCountry.Size = new System.Drawing.Size(121, 24);
-            this.comboPopCountry.TabIndex = 14;
-            // 
-            // radioTopCountryPop
-            // 
-            this.radioTopCountryPop.AutoSize = true;
-            this.radioTopCountryPop.Location = new System.Drawing.Point(5, 272);
-            this.radioTopCountryPop.Name = "radioTopCountryPop";
-            this.radioTopCountryPop.Size = new System.Drawing.Size(166, 21);
-            this.radioTopCountryPop.TabIndex = 13;
-            this.radioTopCountryPop.TabStop = true;
-            this.radioTopCountryPop.Text = "Ülkelere Göre Top 10";
-            this.radioTopCountryPop.UseVisualStyleBackColor = true;
             // 
             // radioTopPop
             // 
@@ -1268,45 +1271,24 @@
             // classicPanel
             // 
             this.classicPanel.Controls.Add(this.buttonClassicUpdate);
-            this.classicPanel.Controls.Add(this.comboClassicCountry);
-            this.classicPanel.Controls.Add(this.radioTopCountryClassic);
             this.classicPanel.Controls.Add(this.radioTopClassic);
             this.classicPanel.Controls.Add(this.radioGeneralClassic);
             this.classicPanel.Controls.Add(this.buttonClassicBack);
             this.classicPanel.Controls.Add(this.listClassic);
-            this.classicPanel.Location = new System.Drawing.Point(185, 321);
+            this.classicPanel.Location = new System.Drawing.Point(182, 388);
             this.classicPanel.Name = "classicPanel";
             this.classicPanel.Size = new System.Drawing.Size(442, 343);
             this.classicPanel.TabIndex = 7;
             // 
             // buttonClassicUpdate
             // 
-            this.buttonClassicUpdate.Location = new System.Drawing.Point(315, 210);
+            this.buttonClassicUpdate.Location = new System.Drawing.Point(364, 207);
             this.buttonClassicUpdate.Name = "buttonClassicUpdate";
             this.buttonClassicUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonClassicUpdate.TabIndex = 20;
             this.buttonClassicUpdate.Text = "Yenile";
             this.buttonClassicUpdate.UseVisualStyleBackColor = true;
             this.buttonClassicUpdate.Click += new System.EventHandler(this.buttonClassicUpdate_Click);
-            // 
-            // comboClassicCountry
-            // 
-            this.comboClassicCountry.FormattingEnabled = true;
-            this.comboClassicCountry.Location = new System.Drawing.Point(188, 210);
-            this.comboClassicCountry.Name = "comboClassicCountry";
-            this.comboClassicCountry.Size = new System.Drawing.Size(121, 24);
-            this.comboClassicCountry.TabIndex = 19;
-            // 
-            // radioTopCountryClassic
-            // 
-            this.radioTopCountryClassic.AutoSize = true;
-            this.radioTopCountryClassic.Location = new System.Drawing.Point(6, 263);
-            this.radioTopCountryClassic.Name = "radioTopCountryClassic";
-            this.radioTopCountryClassic.Size = new System.Drawing.Size(166, 21);
-            this.radioTopCountryClassic.TabIndex = 18;
-            this.radioTopCountryClassic.TabStop = true;
-            this.radioTopCountryClassic.Text = "Ülkelere Göre Top 10";
-            this.radioTopCountryClassic.UseVisualStyleBackColor = true;
             // 
             // radioTopClassic
             // 
@@ -1360,7 +1342,7 @@
             this.normalUserPanel.Controls.Add(this.buttonNormalClassic);
             this.normalUserPanel.Controls.Add(this.buttonNormalPop);
             this.normalUserPanel.Controls.Add(this.buttonNormalJazz);
-            this.normalUserPanel.Location = new System.Drawing.Point(12, 321);
+            this.normalUserPanel.Location = new System.Drawing.Point(12, 388);
             this.normalUserPanel.Name = "normalUserPanel";
             this.normalUserPanel.Size = new System.Drawing.Size(167, 300);
             this.normalUserPanel.TabIndex = 10;
@@ -1463,7 +1445,7 @@
             this.preSearchPanel.Controls.Add(this.textPreSearchBox);
             this.preSearchPanel.Controls.Add(this.label21);
             this.preSearchPanel.Controls.Add(this.listPreFounded);
-            this.preSearchPanel.Location = new System.Drawing.Point(185, 321);
+            this.preSearchPanel.Location = new System.Drawing.Point(182, 388);
             this.preSearchPanel.Name = "preSearchPanel";
             this.preSearchPanel.Size = new System.Drawing.Size(442, 343);
             this.preSearchPanel.TabIndex = 11;
@@ -1525,9 +1507,13 @@
             // 
             // topTenPanel
             // 
+            this.topTenPanel.Controls.Add(this.comboBoxCountry);
+            this.topTenPanel.Controls.Add(this.buttonUpdateTopTenList);
+            this.topTenPanel.Controls.Add(this.radioCountryTopPanel);
+            this.topTenPanel.Controls.Add(this.radioGeneralTopPanel);
             this.topTenPanel.Controls.Add(this.listTopTen);
             this.topTenPanel.Controls.Add(this.buttonTopBack);
-            this.topTenPanel.Location = new System.Drawing.Point(185, 321);
+            this.topTenPanel.Location = new System.Drawing.Point(182, 388);
             this.topTenPanel.Name = "topTenPanel";
             this.topTenPanel.Size = new System.Drawing.Size(442, 343);
             this.topTenPanel.TabIndex = 12;
@@ -1557,7 +1543,7 @@
             this.followPanel.Controls.Add(this.buttonFollowBack);
             this.followPanel.Controls.Add(this.label22);
             this.followPanel.Controls.Add(this.listFollowing);
-            this.followPanel.Location = new System.Drawing.Point(185, 321);
+            this.followPanel.Location = new System.Drawing.Point(182, 388);
             this.followPanel.Name = "followPanel";
             this.followPanel.Size = new System.Drawing.Size(442, 343);
             this.followPanel.TabIndex = 13;
@@ -1609,7 +1595,7 @@
             this.preSongListPanel.Controls.Add(this.buttonPreSongListPop);
             this.preSongListPanel.Controls.Add(this.buttonPreSongListJazz);
             this.preSongListPanel.Controls.Add(this.buttonPreSongListBack);
-            this.preSongListPanel.Location = new System.Drawing.Point(636, 385);
+            this.preSongListPanel.Location = new System.Drawing.Point(630, 388);
             this.preSongListPanel.Name = "preSongListPanel";
             this.preSongListPanel.Size = new System.Drawing.Size(394, 279);
             this.preSongListPanel.TabIndex = 13;
@@ -1700,10 +1686,19 @@
             this.songUpdatePanel.Controls.Add(this.textSongNameUpdate);
             this.songUpdatePanel.Controls.Add(this.buttonApplyUpdateSong);
             this.songUpdatePanel.Controls.Add(this.buttonBackUpdateSong);
-            this.songUpdatePanel.Location = new System.Drawing.Point(185, 670);
+            this.songUpdatePanel.Location = new System.Drawing.Point(136, 107);
             this.songUpdatePanel.Name = "songUpdatePanel";
-            this.songUpdatePanel.Size = new System.Drawing.Size(429, 255);
+            this.songUpdatePanel.Size = new System.Drawing.Size(429, 256);
             this.songUpdatePanel.TabIndex = 30;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 13);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(126, 17);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Güncelleme Paneli";
             // 
             // label24
             // 
@@ -1830,10 +1825,19 @@
             this.singerUpdatePanel.Controls.Add(this.textSingerNameUpdate);
             this.singerUpdatePanel.Controls.Add(this.buttonApplyUpdateSinger);
             this.singerUpdatePanel.Controls.Add(this.buttonBackUpdateSinger);
-            this.singerUpdatePanel.Location = new System.Drawing.Point(617, 670);
+            this.singerUpdatePanel.Location = new System.Drawing.Point(136, 108);
             this.singerUpdatePanel.Name = "singerUpdatePanel";
             this.singerUpdatePanel.Size = new System.Drawing.Size(429, 255);
             this.singerUpdatePanel.TabIndex = 10;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(3, 13);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(126, 17);
+            this.label37.TabIndex = 31;
+            this.label37.Text = "Güncelleme Paneli";
             // 
             // label30
             // 
@@ -1900,10 +1904,19 @@
             this.albumUpdatePanel.Controls.Add(this.textAlbumNameUpdate);
             this.albumUpdatePanel.Controls.Add(this.buttonApplyUpdateAlbum);
             this.albumUpdatePanel.Controls.Add(this.buttonBackUpdateAlbum);
-            this.albumUpdatePanel.Location = new System.Drawing.Point(1052, 670);
+            this.albumUpdatePanel.Location = new System.Drawing.Point(136, 107);
             this.albumUpdatePanel.Name = "albumUpdatePanel";
-            this.albumUpdatePanel.Size = new System.Drawing.Size(429, 255);
+            this.albumUpdatePanel.Size = new System.Drawing.Size(429, 256);
             this.albumUpdatePanel.TabIndex = 31;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(3, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(126, 17);
+            this.label38.TabIndex = 31;
+            this.label38.Text = "Güncelleme Paneli";
             // 
             // label32
             // 
@@ -1989,98 +2002,64 @@
             this.buttonBackUpdateAlbum.UseVisualStyleBackColor = true;
             this.buttonBackUpdateAlbum.Click += new System.EventHandler(this.buttonBackUpdateAlbum_Click);
             // 
-            // label36
+            // radioGeneralTopPanel
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(3, 13);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(126, 17);
-            this.label36.TabIndex = 30;
-            this.label36.Text = "Güncelleme Paneli";
+            this.radioGeneralTopPanel.AutoSize = true;
+            this.radioGeneralTopPanel.Location = new System.Drawing.Point(3, 218);
+            this.radioGeneralTopPanel.Name = "radioGeneralTopPanel";
+            this.radioGeneralTopPanel.Size = new System.Drawing.Size(101, 21);
+            this.radioGeneralTopPanel.TabIndex = 12;
+            this.radioGeneralTopPanel.TabStop = true;
+            this.radioGeneralTopPanel.Text = "Genel Liste";
+            this.radioGeneralTopPanel.UseVisualStyleBackColor = true;
             // 
-            // label37
+            // radioCountryTopPanel
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(3, 13);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(126, 17);
-            this.label37.TabIndex = 31;
-            this.label37.Text = "Güncelleme Paneli";
+            this.radioCountryTopPanel.AutoSize = true;
+            this.radioCountryTopPanel.Location = new System.Drawing.Point(3, 245);
+            this.radioCountryTopPanel.Name = "radioCountryTopPanel";
+            this.radioCountryTopPanel.Size = new System.Drawing.Size(151, 21);
+            this.radioCountryTopPanel.TabIndex = 13;
+            this.radioCountryTopPanel.TabStop = true;
+            this.radioCountryTopPanel.Text = "Ülkelere Göre Liste";
+            this.radioCountryTopPanel.UseVisualStyleBackColor = true;
             // 
-            // label38
+            // buttonUpdateTopTenList
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(3, 10);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(126, 17);
-            this.label38.TabIndex = 31;
-            this.label38.Text = "Güncelleme Paneli";
+            this.buttonUpdateTopTenList.Location = new System.Drawing.Point(361, 218);
+            this.buttonUpdateTopTenList.Name = "buttonUpdateTopTenList";
+            this.buttonUpdateTopTenList.Size = new System.Drawing.Size(78, 23);
+            this.buttonUpdateTopTenList.TabIndex = 14;
+            this.buttonUpdateTopTenList.Text = "Yenile";
+            this.buttonUpdateTopTenList.UseVisualStyleBackColor = true;
+            this.buttonUpdateTopTenList.Click += new System.EventHandler(this.buttonUpdateTopTenList_Click);
             // 
-            // label40
+            // comboBoxCountry
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(8, 8);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(88, 17);
-            this.label40.TabIndex = 7;
-            this.label40.Text = "Kullanıcı Adı:";
-            // 
-            // showPassLog
-            // 
-            this.showPassLog.AutoSize = true;
-            this.showPassLog.Location = new System.Drawing.Point(208, 35);
-            this.showPassLog.Name = "showPassLog";
-            this.showPassLog.Size = new System.Drawing.Size(111, 21);
-            this.showPassLog.TabIndex = 8;
-            this.showPassLog.Text = "şifreyi göster";
-            this.showPassLog.UseVisualStyleBackColor = true;
-            this.showPassLog.CheckedChanged += new System.EventHandler(this.showPassLog_CheckedChanged);
-            // 
-            // showPassAdmin
-            // 
-            this.showPassAdmin.AutoSize = true;
-            this.showPassAdmin.Location = new System.Drawing.Point(208, 33);
-            this.showPassAdmin.Name = "showPassAdmin";
-            this.showPassAdmin.Size = new System.Drawing.Size(111, 21);
-            this.showPassAdmin.TabIndex = 9;
-            this.showPassAdmin.Text = "şifreyi göster";
-            this.showPassAdmin.UseVisualStyleBackColor = true;
-            this.showPassAdmin.CheckedChanged += new System.EventHandler(this.showPassAdmin_CheckedChanged);
-            // 
-            // showRegAdmin
-            // 
-            this.showRegAdmin.AutoSize = true;
-            this.showRegAdmin.Location = new System.Drawing.Point(223, 117);
-            this.showRegAdmin.Name = "showRegAdmin";
-            this.showRegAdmin.Size = new System.Drawing.Size(111, 21);
-            this.showRegAdmin.TabIndex = 17;
-            this.showRegAdmin.Text = "şifreyi göster";
-            this.showRegAdmin.UseVisualStyleBackColor = true;
-            this.showRegAdmin.CheckedChanged += new System.EventHandler(this.showRegAdmin_CheckedChanged);
+            this.comboBoxCountry.FormattingEnabled = true;
+            this.comboBoxCountry.Location = new System.Drawing.Point(234, 218);
+            this.comboBoxCountry.Name = "comboBoxCountry";
+            this.comboBoxCountry.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCountry.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.albumUpdatePanel);
-            this.Controls.Add(this.singerUpdatePanel);
-            this.Controls.Add(this.songUpdatePanel);
-            this.Controls.Add(this.albumProscPanel);
-            this.Controls.Add(this.singerProscPanel);
-            this.Controls.Add(this.songProcsPanel);
-            this.Controls.Add(this.userloginPanel);
-            this.Controls.Add(this.logPanel);
+            this.ClientSize = new System.Drawing.Size(1127, 740);
             this.Controls.Add(this.followPanel);
-            this.Controls.Add(this.preSongListPanel);
             this.Controls.Add(this.topTenPanel);
+            this.Controls.Add(this.userloginPanel);
+            this.Controls.Add(this.adminPanel);
+            this.Controls.Add(this.classicPanel);
+            this.Controls.Add(this.logPanel);
+            this.Controls.Add(this.searchPanel);
+            this.Controls.Add(this.preSearchPanel);
+            this.Controls.Add(this.preSongListPanel);
             this.Controls.Add(this.popPanel);
             this.Controls.Add(this.normalUserPanel);
-            this.Controls.Add(this.classicPanel);
             this.Controls.Add(this.premiumUserPanel);
-            this.Controls.Add(this.preSearchPanel);
             this.Controls.Add(this.adminProscPanel);
-            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.registerPanel);
             this.Controls.Add(this.jazzPanel);
             this.Name = "Form1";
@@ -2113,6 +2092,7 @@
             this.preSearchPanel.ResumeLayout(false);
             this.preSearchPanel.PerformLayout();
             this.topTenPanel.ResumeLayout(false);
+            this.topTenPanel.PerformLayout();
             this.followPanel.ResumeLayout(false);
             this.followPanel.PerformLayout();
             this.preSongListPanel.ResumeLayout(false);
@@ -2233,23 +2213,17 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ListView listPreFounded;
         private System.Windows.Forms.Button buttonUserSongAdd;
-        private System.Windows.Forms.RadioButton radioTopCountryJazz;
         private System.Windows.Forms.RadioButton radioTopJazz;
         private System.Windows.Forms.RadioButton radioGeneralJazz;
-        private System.Windows.Forms.ComboBox comboJazzCountry;
         private System.Windows.Forms.Button buttonPreTop;
         private System.Windows.Forms.Button buttonJazzUpdate;
         private System.Windows.Forms.Button buttonNormalTop;
         private System.Windows.Forms.Panel topTenPanel;
         private System.Windows.Forms.Button buttonTopBack;
         private System.Windows.Forms.Button buttonPopUpdate;
-        private System.Windows.Forms.ComboBox comboPopCountry;
-        private System.Windows.Forms.RadioButton radioTopCountryPop;
         private System.Windows.Forms.RadioButton radioTopPop;
         private System.Windows.Forms.RadioButton radioGeneralPop;
         private System.Windows.Forms.Button buttonClassicUpdate;
-        private System.Windows.Forms.ComboBox comboClassicCountry;
-        private System.Windows.Forms.RadioButton radioTopCountryClassic;
         private System.Windows.Forms.RadioButton radioTopClassic;
         private System.Windows.Forms.RadioButton radioGeneralClassic;
         private System.Windows.Forms.ListView listPop;
@@ -2314,6 +2288,10 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.CheckBox showPassAdmin;
         private System.Windows.Forms.CheckBox showRegAdmin;
+        private System.Windows.Forms.RadioButton radioCountryTopPanel;
+        private System.Windows.Forms.RadioButton radioGeneralTopPanel;
+        private System.Windows.Forms.Button buttonUpdateTopTenList;
+        private System.Windows.Forms.ComboBox comboBoxCountry;
     }
 }
 

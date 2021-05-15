@@ -36,6 +36,9 @@ namespace Prolab2_3Spo
             topTenPanel.Hide();
             preSongListPanel.Hide();
             followPanel.Hide();
+            albumUpdatePanel.Hide();
+            songUpdatePanel.Hide();
+            singerUpdatePanel.Hide();
         }
         
         /*
@@ -151,7 +154,7 @@ namespace Prolab2_3Spo
             String songAlbum = textSongAlbumAdd.Text;
             String[] songSinger = textSongSingerAdd.Text.Split(';');
             String songLongTemp = textSongLongAdd.Text;
-            float songLong = float.Parse(songLongTemp);
+            //float songLong = float.Parse(songLongTemp);
             String date = textSongDateAdd.Text;
             String songType = textSongTypeAdd.Text;
             songUpdatePanel.Show();
@@ -549,7 +552,13 @@ namespace Prolab2_3Spo
         {
             topTenPanel.Hide();
         }
+        
+        //Top Ten listesini günceller
+        private void buttonUpdateTopTenList_Click(object sender, EventArgs e)
+        {
 
+        }
+        
         /*
          * Takipçi paneli işlemleri
          */
