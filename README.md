@@ -9,8 +9,6 @@
 
 -Güncelleme yaparken sanatçı veya albüm değiştirdiğinde ara tabloları da güncelle!!!
 
--Şarkı eklerken yayımlanma tarihi kısmını kaldır
-
 
 @@oğuz
 
