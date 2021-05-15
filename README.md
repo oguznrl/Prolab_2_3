@@ -9,6 +9,8 @@
 
 -Güncelleme yaparken sanatçı veya albüm değiştirdiğinde ara tabloları da güncelle!!!
 
+-db'de şarkılar'a yayımlanma tarihi ekle
+
 
 @@oğuz
 
