@@ -11,6 +11,7 @@
 
 -db'de şarkılar'a yayımlanma tarihi ekle
 
+-FK'ları yeniden tasarla
 
 @@oğuz
 
