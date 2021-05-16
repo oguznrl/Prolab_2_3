@@ -13,4 +13,4 @@
 
 -Şarkı türüne göre top10'de 10'a kısıtla
 
--preöium kullanıcının tüm şarkılarını eklemede hata var
+-premium kullanıcının çalma listesinin tümünü eklerken eğer listende halihazırda o şarkı varsa eklemiyor
