@@ -9,6 +9,4 @@
 
 -db'de şarkılar'a yayımlanma tarihi ekle
 
--Şarkı türüne göre top10'de 10'a kısıtla
-
 -premium kullanıcının çalma listesinin tümünü eklerken eğer listende halihazırda o şarkı varsa eklemiyor
