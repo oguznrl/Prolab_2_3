@@ -2,4 +2,4 @@
 
 # BUGS---
 
---
+-Ulkelere gore top10 eklenecek
