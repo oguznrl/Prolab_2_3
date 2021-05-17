@@ -1671,7 +1671,8 @@ namespace Prolab2_3Spo
 
         public bool follow(string user, string followuser)
         {
-            string query = $"INSERT INTO {user}takip (kullaniciAd) VALUES ('{followuser}');";
+            string query=$"INSERT INTO {user}takip (kullaniciAd) SELECT '{followuser}' WHERE NOT EXISTS (SELECT kullaniciAd FROM {user}takip WHERE kullaniciAd = '{followuser}');";           
+
 
             try
             {
