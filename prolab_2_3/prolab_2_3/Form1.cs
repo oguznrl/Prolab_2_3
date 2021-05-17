@@ -1672,8 +1672,6 @@ namespace Prolab2_3Spo
         public bool follow(string user, string followuser)
         {
             string query=$"INSERT INTO {user}takip (kullaniciAd) SELECT '{followuser}' WHERE NOT EXISTS (SELECT kullaniciAd FROM {user}takip WHERE kullaniciAd = '{followuser}');";           
-
-
             try
             {
                 if (OpenConnection())
@@ -2089,6 +2087,43 @@ namespace Prolab2_3Spo
             {
                 conn.Close();
 
+            }
+        }
+
+        public bool searchUserinTakipList(string user,string preUser)
+        {
+            string query = $"SELECT kullaniciAd FROM {user}takip WHERE kullaniciAd='{preUser}';";
+
+            try
+            {
+                if (OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return false;
+                    }
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
             }
         }
 
@@ -2764,14 +2799,22 @@ namespace Prolab2_3Spo
             String userfollow = listPreFounded.SelectedItems[0].Text;
             if (listPreFounded.SelectedItems.Count == 1)
             {
-                if (follow(user, userfollow))
+                if (searchUserinTakipList(user, userfollow))
                 {
-                    MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} takip edildi!");
+                    MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} zaten takip ediliyor!");
                 }
                 else
                 {
-                    MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} takip edilemedi!");
+                    if (follow(user, userfollow))
+                    {
+                        MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} takip edildi!");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} takip edilemedi!");
+                    }
                 }
+                
             }
         }
         //Premium kullanıcı arar
