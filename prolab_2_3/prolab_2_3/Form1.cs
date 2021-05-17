@@ -2660,6 +2660,8 @@ namespace Prolab2_3Spo
             preSearchPanel.Hide();
             followPanel.Hide();
             preSongListPanel.Hide();
+            comboBoxCountry.Visible = false;
+            buttonUpdateTopTenList.Visible = false;
 
             if (!top10click)
             {
@@ -2836,8 +2838,20 @@ namespace Prolab2_3Spo
         //Top Ten listesini günceller
         private void buttonUpdateTopTenList_Click(object sender, EventArgs e)
         {
-            string country = comboBoxCountry.SelectedItem.ToString();
-            top10ulke(country);
+            
+            if (radioCountryTopPanel.Checked)
+            {
+                if (comboBoxCountry.SelectedIndex> -1)
+                {
+                    string country = comboBoxCountry.SelectedItem.ToString();
+                    top10ulke(country);
+                }
+                else
+                {
+                    MessageBox.Show("Lutfen ulke seciniz!");
+                }
+            }
+            
         }
         
         /*
@@ -3127,6 +3141,24 @@ namespace Prolab2_3Spo
         private void comboBoxCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioGeneralTopPanel_CheckedChanged(object sender, EventArgs e)
+        {
+            top10();
+            comboBoxCountry.Visible = false;
+            buttonUpdateTopTenList.Visible = false;
+        }
+
+        private void radioCountryTopPanel_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxCountry.Visible = true;
+            buttonUpdateTopTenList.Visible = true;
+            if (comboBoxCountry.SelectedIndex > -1)
+            {
+                string country = comboBoxCountry.SelectedItem.ToString();
+                top10ulke(country);
+            }
         }
     }
 }

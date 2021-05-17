@@ -1914,6 +1914,7 @@
             this.radioCountryTopPanel.TabStop = true;
             this.radioCountryTopPanel.Text = "Ülkelere Göre Liste";
             this.radioCountryTopPanel.UseVisualStyleBackColor = true;
+            this.radioCountryTopPanel.CheckedChanged += new System.EventHandler(this.radioCountryTopPanel_CheckedChanged);
             // 
             // radioGeneralTopPanel
             // 
@@ -1926,6 +1927,7 @@
             this.radioGeneralTopPanel.TabStop = true;
             this.radioGeneralTopPanel.Text = "Genel Liste";
             this.radioGeneralTopPanel.UseVisualStyleBackColor = true;
+            this.radioGeneralTopPanel.CheckedChanged += new System.EventHandler(this.radioGeneralTopPanel_CheckedChanged);
             // 
             // listTopTen
             // 
@@ -2097,7 +2099,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 691);
+            this.ClientSize = new System.Drawing.Size(1279, 691);
             this.Controls.Add(this.followPanel);
             this.Controls.Add(this.topTenPanel);
             this.Controls.Add(this.userloginPanel);
