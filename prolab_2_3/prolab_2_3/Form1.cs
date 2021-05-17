@@ -2666,6 +2666,7 @@ namespace Prolab2_3Spo
                 top10();
             }
             comboBoxCountry.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCountry.Items.Clear();
             addUlketoComboBox();
         }
         //Premium kullanıcı arama panelini normal kullanıcı için açar
