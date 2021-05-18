@@ -76,6 +76,7 @@ namespace Prolab2_3Spo
             listPreFounded.Columns.Add("Kullanici", 70);
             listPreFounded.Columns.Add("Ulke", 70, HorizontalAlignment.Center);
             listPreFounded.Columns.Add("Uyelik", 70, HorizontalAlignment.Center);
+            listPreFounded.Columns.Add("KullaniciID", 0, HorizontalAlignment.Center);
             listPreFounded.View = View.Details;
 
             listSongFounded.Columns.Add("Sarki", 70);
@@ -107,6 +108,7 @@ namespace Prolab2_3Spo
             listJazz.View = View.Details;
 
             listFollowing.Columns.Add("Kullanıcı", 70);
+            listFollowing.Columns.Add("KullanıcıID", 00);
             listFollowing.View = View.Details;
 
             listView1.Columns.Add("Sarki", 70);
@@ -233,7 +235,7 @@ namespace Prolab2_3Spo
 
         public bool calmaListesiCreate(string user, string tur)
         {
-            string query = $"CREATE TABLE {user}{tur} (sarkiID INT NOT NULL AUTO_INCREMENT, sarkiAd VARCHAR(45) NULL, sarkiSanatci VARCHAR(100) NULL, sarkiSure VARCHAR(45) NULL, sarkiDinlenmeSayi VARCHAR(45) NULL, PRIMARY KEY(sarkiID));";
+            string query = $"CREATE TABLE {user}{tur} (sarkiID INT NOT NULL, PRIMARY KEY (sarkiID), CONSTRAINT f_key_{user}{tur}f FOREIGN KEY (sarkiID) REFERENCES sarkilar (sarkiID) ON DELETE CASCADE ON UPDATE CASCADE);";
             try
             {
                 if (OpenConnection())
@@ -267,7 +269,7 @@ namespace Prolab2_3Spo
 
         public bool takipListCreate(string user)
         {
-            string query = $"CREATE TABLE {user}takip (kullaniciID INT NOT NULL AUTO_INCREMENT, kullaniciAd VARCHAR(45) NULL, PRIMARY KEY(kullaniciID));";
+            string query = $"CREATE TABLE {user}takip (kullaniciID INT NOT NULL, PRIMARY KEY (kullaniciID), CONSTRAINT f_key_{user}takip FOREIGN KEY (kullaniciID) REFERENCES kullanicilar (kullaniciID) ON DELETE CASCADE ON UPDATE CASCADE);";
             try
             {
                 if (OpenConnection())
@@ -1267,7 +1269,7 @@ namespace Prolab2_3Spo
 
         public void searchkullanici(string kulAd)
         {
-            string query = $"SELECT kullaniciAd, kullaniciUlke, kullaniciTur FROM kullanicilar WHERE kullaniciAd='{kulAd}'AND kullaniciTur='Premium';";
+            string query = $"SELECT kullaniciAd, kullaniciUlke, kullaniciTur,kullaniciID FROM kullanicilar WHERE kullaniciAd='{kulAd}'AND kullaniciTur='Premium';";
 
 
             try
@@ -1290,6 +1292,7 @@ namespace Prolab2_3Spo
                             listPreFounded.Items.Add(dt.Rows[i].ItemArray[0].ToString());
                             listPreFounded.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
                             listPreFounded.Items[i].SubItems.Add(dt.Rows[i].ItemArray[2].ToString());
+                            listPreFounded.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
                         }
                         cmd.ExecuteNonQuery();
                         conn.Close();
@@ -1367,7 +1370,7 @@ namespace Prolab2_3Spo
 
         public void kulJazzList(string kulAd)
         {
-            string query = $"SELECT {kulAd}jazz.sarkiAd,{kulAd}jazz.sarkiSanatci,{kulAd}jazz.sarkiSure,sarkiTur,sarkiDinlenmeSayi FROM {kulAd}jazz,sarkilar WHERE {kulAd}jazz.sarkiID=sarkilar.sarkiID;";
+            string query = $"SELECT sarkilar.sarkiAd,sarkilar.sarkiSanatci,sarkilar.sarkiSure,sarkilar.sarkiTur,sarkilar.sarkiDinlenmeSayi FROM {kulAd}jazz,sarkilar WHERE {kulAd}jazz.sarkiID=sarkilar.sarkiID;";
 
             try
             {
@@ -1414,7 +1417,7 @@ namespace Prolab2_3Spo
 
         public void kulPopList(string kulAd)
         {
-            string query = $"SELECT {kulAd}pop.sarkiAd,{kulAd}pop.sarkiSanatci,{kulAd}pop.sarkiSure,sarkiTur,sarkiDinlenmeSayi FROM {kulAd}pop,sarkilar WHERE {kulAd}pop.sarkiID=sarkilar.sarkiID;";
+            string query = $"SELECT sarkilar.sarkiAd,sarkilar.sarkiSanatci,sarkilar.sarkiSure,sarkilar.sarkiTur,sarkilar.sarkiDinlenmeSayi FROM {kulAd}pop,sarkilar WHERE {kulAd}pop.sarkiID=sarkilar.sarkiID;";
 
             try
             {
@@ -1461,7 +1464,7 @@ namespace Prolab2_3Spo
 
         public void kulKlasikList(string kulAd)
         {
-            string query = $"SELECT {kulAd}klasik.sarkiAd,{kulAd}klasik.sarkiSanatci,{kulAd}klasik.sarkiSure,sarkiTur,sarkiDinlenmeSayi FROM {kulAd}klasik,sarkilar WHERE {kulAd}klasik.sarkiID=sarkilar.sarkiID;";
+            string query = $"SELECT sarkilar.sarkiAd,sarkilar.sarkiSanatci,sarkilar.sarkiSure,sarkilar.sarkiTur,sarkilar.sarkiDinlenmeSayi FROM {kulAd}klasik,sarkilar WHERE {kulAd}klasik.sarkiID=sarkilar.sarkiID;";
 
             try
             {
@@ -1508,7 +1511,7 @@ namespace Prolab2_3Spo
 
         public void kulTakipList(string kulAd)
         {
-            string query = $"SELECT kullaniciAd FROM {kulAd}takip;";
+            string query = $"SELECT kullanicilar.kullaniciAd,{kulAd}takip.kullaniciID FROM {kulAd}takip,kullanicilar WHERE {kulAd}takip.kullaniciID=kullanicilar.kullaniciID;";
 
             try
             {
@@ -1527,6 +1530,7 @@ namespace Prolab2_3Spo
                         for (int i = 0; i <= dt.Rows.Count - 1; i++)
                         {
                             listFollowing.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+                            listFollowing.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
                         }
                         cmd.ExecuteNonQuery();
                         conn.Close();
@@ -1551,10 +1555,9 @@ namespace Prolab2_3Spo
 
         string sarkidin = String.Empty;
         public bool addtoKullList(string user, int sarkiID)
-        {
-            
+        {        
             getSarkiTur(sarkiID);
-            string query = $"INSERT INTO {user}{sarkiTuru} (sarkiID, sarkiAd, sarkiSanatci, sarkiSure) VALUES ('{sarkiID}', '{listSongFounded.SelectedItems[0].Text}', '{listSongFounded.SelectedItems[0].SubItems[1].Text}', '{getSarkiSure(sarkiID)}');";
+            string query = $"INSERT INTO {user}{sarkiTuru} (sarkiID) VALUES ({sarkiID});";
 
             try
             {
@@ -1587,10 +1590,10 @@ namespace Prolab2_3Spo
 
         }
 
-        public bool addtoKullListfromPre(string user, int sarkiID, string sarkiAd, string sarkiSanatci, string sarkiSure)
+        public bool addtoKullListfromPre(string user, int sarkiID)
         {
             getSarkiTur(sarkiID);
-            string query = $"INSERT INTO {user}{sarkiTuru} (sarkiID, sarkiAd, sarkiSanatci, sarkiSure) VALUES ('{sarkiID}', '{sarkiAd}', '{sarkiSanatci}', '{sarkiSure}');";          
+            string query = $"INSERT INTO {user}{sarkiTuru} (sarkiID) VALUES ('{sarkiID}');";          
 
             try
             {
@@ -1625,7 +1628,7 @@ namespace Prolab2_3Spo
 
         public void showList(string kulAd, string tur)
         {
-            string query = $"SELECT sarkiAd, sarkiSanatci, sarkiSure, sarkiID FROM {kulAd}{tur};";
+            string query = $"SELECT sarkiAd, sarkiSanatci, sarkiSure, {kulAd}{tur}.sarkiID FROM {kulAd}{tur},sarkilar WHERE {kulAd}{tur}.sarkiID=sarkilar.sarkiID ;";
 
             try
             {
@@ -1669,9 +1672,9 @@ namespace Prolab2_3Spo
             }
         }
 
-        public bool follow(string user, string followuser)
+        public bool follow(string user, int followuserID)
         {
-            string query=$"INSERT INTO {user}takip (kullaniciAd) SELECT '{followuser}' WHERE NOT EXISTS (SELECT kullaniciAd FROM {user}takip WHERE kullaniciAd = '{followuser}');";           
+            string query = $"INSERT INTO {user}takip (kullaniciID) SELECT '{followuserID}' WHERE NOT EXISTS (SELECT kullaniciID FROM {user}takip WHERE kullaniciID = '{followuserID}');";
             try
             {
                 if (OpenConnection())
@@ -2090,9 +2093,9 @@ namespace Prolab2_3Spo
             }
         }
 
-        public bool searchUserinTakipList(string user,string preUser)
+        public bool searchUserinTakipList(string user,int preUserID)
         {
-            string query = $"SELECT kullaniciAd FROM {user}takip WHERE kullaniciAd='{preUser}';";
+            string query = $"SELECT kullaniciID FROM {user}takip WHERE kullaniciID='{preUserID}';";
 
             try
             {
@@ -2796,16 +2799,16 @@ namespace Prolab2_3Spo
         private void buttonFollow_Click(object sender, EventArgs e)
         {
             String user = textUserName.Text;
-            String userfollow = listPreFounded.SelectedItems[0].Text;
+            int userfollowID = Convert.ToInt32(listPreFounded.SelectedItems[0].SubItems[3].Text);
             if (listPreFounded.SelectedItems.Count == 1)
             {
-                if (searchUserinTakipList(user, userfollow))
+                if (searchUserinTakipList(user, userfollowID))
                 {
                     MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} zaten takip ediliyor!");
                 }
                 else
                 {
-                    if (follow(user, userfollow))
+                    if (follow(user, userfollowID))
                     {
                         MessageBox.Show($"{listPreFounded.SelectedItems[0].Text} takip edildi!");
                     }
@@ -2991,7 +2994,12 @@ namespace Prolab2_3Spo
             String user = textUserName.Text;
             string listeturu = String.Empty;
             int sarkiID = Int32.Parse(listView1.SelectedItems[0].SubItems[3].Text);
-            if(addtoKullListfromPre(user,sarkiID, listView1.SelectedItems[0].Text, listView1.SelectedItems[0].SubItems[1].Text, listView1.SelectedItems[0].SubItems[2].Text))
+            getSarkiTur(sarkiID);
+            if (searchSonginUserList(user, sarkiTuru, sarkiID))
+            {
+                MessageBox.Show($"{listView1.SelectedItems[0].Text}-{listView1.SelectedItems[0].SubItems[1].Text} calma listenizde zaten var!");
+            }
+            else if(addtoKullListfromPre(user,sarkiID))
             {
                 MessageBox.Show($"{listView1.SelectedItems[0].Text}-{listView1.SelectedItems[0].SubItems[1].Text} calma listenize eklendi!");
             }
