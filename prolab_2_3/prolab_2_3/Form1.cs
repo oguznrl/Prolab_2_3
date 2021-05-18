@@ -1269,7 +1269,7 @@ namespace Prolab2_3Spo
 
         public void searchkullanici(string kulAd)
         {
-            string query = $"SELECT kullaniciAd, kullaniciUlke, kullaniciTur,kullaniciID FROM kullanicilar WHERE kullaniciAd='{kulAd}'AND kullaniciTur='Premium';";
+            string query = $"SELECT kullaniciAd, kullaniciUlke, kullaniciTur,kullaniciID FROM kullanicilar WHERE kullaniciAd='{kulAd}'AND kullaniciTur='Premium' AND kullaniciAd <> '{textUserName.Text}';";
 
 
             try
